@@ -1,0 +1,62 @@
+.container {
+    position: relative;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+    position: absolute;
+    top: 94px;
+    left: 516px;
+}
+
+.title {
+    font-family: "Cormorant Garamond", sans-serif;
+    font-weight: 600;
+    font-size: 64px;
+    color: #efca01;
+}
+
+.blackSpan {
+    color: black;
+}
+
+.icon {
+    width: 41px;
+    height: 57px;
+}
+
+.picture {
+    width: 740px;
+    height: 483px;
+    background: #717171;
+}
+
+.subTitle {
+    position: absolute;
+    top: 179px;
+    right: 0;
+
+    font-family: "Cormorant Garamond", sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.button {
+    background-color: #efca01;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    padding: 20px 32px;
+    position: absolute;
+    top: 360px;
+    right: 0;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #5d4037;
+}
