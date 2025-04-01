@@ -1,0 +1,13 @@
+/* .swiper .swiper-slide {
+    display: flex;
+} */
+ 
+.swiper {
+    margin-top: 48px;
+}
+
+.swiper-wrapper {
+    margin: 0 58px;
+    /* max-width: 1020px; */
+    overflow: hidden;
+}

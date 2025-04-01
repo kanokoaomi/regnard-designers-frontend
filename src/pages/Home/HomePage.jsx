@@ -1,4 +1,4 @@
-import MainScreen from "../../components/MainScreen.jsx/MainScreen"
+import MainScreen from "../../components/MainScreen/MainScreen.jsx"
 import Section from "../../components/Section/Section"
 import styles from "./HomePage.module.css"
 
