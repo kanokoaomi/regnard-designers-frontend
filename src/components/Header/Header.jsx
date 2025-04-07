@@ -11,6 +11,7 @@ const Header = ({ children }) => {
                 <ul className={styles.links}>
                     <li className={styles.link}>Home</li>
                     <li className={styles.link}>Our creations</li>
+                    <li className={styles.link}>About us</li>
                     <li className={styles.link}>Contacts</li>
                 </ul>
             </div>

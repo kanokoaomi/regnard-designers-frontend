@@ -10,7 +10,7 @@ const MainScreen = () => {
                 <h1 className={styles.title}>Regnard <span className={styles.blackSpan}>Designers</span></h1>
                 <ReactSVG src={regnardDesigners} desc='Regnard Designers logo' wrapper="div" className={styles.icon} />
             </div>
-            <h2 className={styles.subTitle}>Jewelry creations</h2>
+            <h2 className={styles.subTitle}>Jewellery creations</h2>
             <button className={styles.button}>Make an order</button>
         </div>
     )
