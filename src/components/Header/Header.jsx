@@ -1,6 +1,7 @@
 import styles from "./Header.module.css"
 import { ReactSVG } from 'react-svg';
 import regnardDesigners from "../../assets/regnard-designers.svg"
+import Navigation from "../Navigation/Navigation";
 
 
 const Header = ({ children }) => {
@@ -8,12 +9,7 @@ const Header = ({ children }) => {
         <div>
             <div className={styles.header}>
                 <ReactSVG src={regnardDesigners} desc='Regnard Designers logo' wrapper="div" className={styles.icon} />
-                <ul className={styles.links}>
-                    <li className={styles.link}>Home</li>
-                    <li className={styles.link}>Our creations</li>
-                    <li className={styles.link}>About us</li>
-                    <li className={styles.link}>Contacts</li>
-                </ul>
+                <Navigation />
             </div>
             {children}
         </div>
