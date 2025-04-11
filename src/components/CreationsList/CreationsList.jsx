@@ -8,7 +8,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 // import swiperConfig from "../../utils/swiper.js";
 
+
+
 const CreationsList = () => {
+
+
+
+
     return (
         <>
             <h2 className={styles.title}>Discover our <span className={styles.yellowSpan}>creations</span></h2>
