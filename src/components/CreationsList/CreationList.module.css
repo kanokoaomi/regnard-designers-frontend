@@ -1,13 +1,3 @@
-.title {
-    font-family: "Cormorant Garamond", sans-serif;
-    font-weight: 600;
-    font-size: 64px;
-    color: #111111;
-}
-
-.yellowSpan {
-    color: #efca01;
-}
 
 .swiper .swiperSlide {
     display: flex;

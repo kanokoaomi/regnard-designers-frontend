@@ -1,0 +1,29 @@
+.title {
+    text-align: end;
+    margin-bottom: 45px;
+}
+
+.avatar {
+    width: 400px;
+    height: 400px;
+    background-color: burlywood;
+}
+
+.infoContainer {
+    display: flex;
+    gap: 38px;
+}
+
+.name {
+    font-family: "Cormorant Garamond", sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+}
+
+.text {
+    max-width: 684px;
+}
+
+.textContainer {
+    text-align: end;
+}

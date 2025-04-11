@@ -1,4 +1,4 @@
-import pictures from "../../utils/pictures.js";
+// import pictures from "../../utils/pictures.js";
 import styles from "./CreationList.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Grid } from "swiper/modules"; // Додали модулі
@@ -6,18 +6,23 @@ import "swiper/css";
 import "swiper/css/grid"
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useSelector } from "react-redux";
+import { isLoading, selectPictures } from "../../redux/jewellery/jewellerySelectors";
 // import swiperConfig from "../../utils/swiper.js";
-
-
 
 const CreationsList = () => {
 
+    const pictures = useSelector(selectPictures);
+    const Loading = useSelector(isLoading);
+    console.log(pictures);
 
-
+    if (Loading) {
+        return <p>Loading...</p>;
+    }
 
     return (
         <>
-            <h2 className={styles.title}>Discover our <span className={styles.yellowSpan}>creations</span></h2>
+            <h2 className="title">Discover our <span className="yellowSpan">creations</span></h2>
             <>
                 <Swiper className={styles.swiper}
                     modules={[Grid, Pagination, Navigation]}
@@ -39,22 +44,15 @@ const CreationsList = () => {
                     }}
                 >
                     <div className="swiper-wrapper">
-                        {
-                            pictures.map((picture) => {
-                                return (
-
-                                    <SwiperSlide key={picture.key} className={styles.swiperSlide}>
-                                        <div className={styles.picture}>{picture.value}</div>
-                                        {/* <div className={styles.picture}>{picture.value}</div>
-                                    <div className={styles.picture}>{picture.value}</div>
-                                    <div className={styles.picture}>{picture.value}</div>
-                                    <div className={styles.picture}>{picture.value}</div>
-                                    <div className={styles.picture}>{picture.value}</div> */}
-                                    </SwiperSlide>
-
-                                )
-                            })
-                        }
+                        {pictures && pictures.length > 0 ? (
+                            pictures.map((picture) => (
+                                <SwiperSlide key={picture._id || picture.key} className={styles.swiperSlide}>
+                                    <img className={styles.picture} src={picture.pictureUrl} alt={picture.name} />
+                                </SwiperSlide>
+                            ))
+                        ) : (
+                            <p>No pictures available</p>
+                        )}
                     </div>
                 </Swiper>
             </>

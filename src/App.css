@@ -11,3 +11,14 @@
     /* max-width: 1020px; */
     overflow: hidden;
 }
+
+.title {
+    font-family: "Cormorant Garamond", sans-serif;
+    font-weight: 600;
+    font-size: 64px;
+    color: #111111;
+}
+
+.yellowSpan {
+    color: #efca01;
+}

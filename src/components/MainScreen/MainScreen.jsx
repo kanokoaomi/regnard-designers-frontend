@@ -7,7 +7,7 @@ const MainScreen = () => {
         <div className={styles.container}>
             <div className={styles.picture}></div>
             <div className={styles.titleContainer}>
-                <h1 className={styles.title}>Regnard <span className={styles.blackSpan}>Designers</span></h1>
+                <h1 className="title"><span className="yellowSpan">Regnard</span> Designers</h1>
                 <ReactSVG src={regnardDesigners} desc='Regnard Designers logo' wrapper="div" className={styles.icon} />
             </div>
             <h2 className={styles.subTitle}>Jewellery creations</h2>
