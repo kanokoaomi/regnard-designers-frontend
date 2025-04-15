@@ -1,21 +1,22 @@
 // import pictures from "../../utils/pictures.js";
-import styles from "./CreationList.module.css";
+import styles from "./CreationsList.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Grid } from "swiper/modules"; // Додали модулі
 import "swiper/css";
 import "swiper/css/grid"
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+// import 'swiper/css/virtual';
 import { useSelector } from "react-redux";
 import { isLoading, selectPictures } from "../../redux/jewellery/jewellerySelectors";
-// import swiperConfig from "../../utils/swiper.js";
+
 
 const CreationsList = () => {
 
     const pictures = useSelector(selectPictures);
     const Loading = useSelector(isLoading);
-    console.log(pictures);
 
+    console.log("Loading:", Loading);
     if (Loading) {
         return <p>Loading...</p>;
     }
@@ -43,22 +44,24 @@ const CreationsList = () => {
                         onlyInViewport: true,
                     }}
                 >
-                    <div className="swiper-wrapper">
-                        {pictures && pictures.length > 0 ? (
-                            pictures.map((picture) => (
-                                <SwiperSlide key={picture._id || picture.key} className={styles.swiperSlide}>
-                                    <img className={styles.picture} src={picture.pictureUrl} alt={picture.name} />
-                                </SwiperSlide>
-                            ))
-                        ) : (
-                            <p>No pictures available</p>
-                        )}
-                    </div>
+                    {/* <div className="swiper-wrapper"> */}
+                    {pictures && pictures.length > 0 && (
+                        pictures.map((picture) => (
+                            <SwiperSlide key={picture._id} className={styles.swiperSlide}>
+                                <img className={styles.picture} src={picture.pictureUrl} alt={picture.name} />
+                            </SwiperSlide>
+                        ))
+                    )}
+                    {/* </div> */}
                 </Swiper>
             </>
 
         </>
     )
 }
+
+// : (
+//     <p>No pictures available</p>
+// )
 
 export default CreationsList

@@ -1,2 +1,2 @@
-export const selectPictures = (state) => state.pictures;
-export const isLoading = (state) => state.isLoading;
+export const selectPictures = (state) => state.jewellery.pictures;
+export const isLoading = (state) => state.jewellery.isLoading;

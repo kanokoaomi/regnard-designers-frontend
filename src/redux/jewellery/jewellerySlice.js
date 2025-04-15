@@ -4,7 +4,7 @@ import { getAllPictures } from "./jewelleryOperations.js";
 const initialState = {
   pictures: [],
   isLoading: false,
-  error: null,
+  error: false,
 };
 
 const jewellerySlice = createSlice({
@@ -27,7 +27,7 @@ const jewellerySlice = createSlice({
         state.isLoading = true;
       })
       .addCase(getAllPictures.fulfilled, (state, action) => {
-        state.pictures = action.payload.data;
+        state.pictures = action.payload;
         state.isLoading = false;
       })
       .addCase(getAllPictures.rejected, (state) => {

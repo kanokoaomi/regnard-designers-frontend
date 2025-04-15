@@ -13,8 +13,8 @@ export const getAllPictures = createAsyncThunk(
     try {
       console.log("Запит до сервера...");
       const responce = await api.get("/jewellery/");
-      console.log("Запит успішно пройшов:", responce);
-      return responce.data;
+      console.log("Запит успішно пройшов:", responce.data.data);
+      return responce.data.data;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);
     }

@@ -21,7 +21,7 @@ const jewellerysConfig = {
 
 export const store = configureStore({
   reducer: {
-    jewelleryReducer: persistReducer(jewellerysConfig, jewelleryReducer),
+    jewellery: persistReducer(jewellerysConfig, jewelleryReducer),
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
