@@ -1,0 +1,10 @@
+.button {
+    border: none;
+    background-color: gold;
+    cursor: pointer;
+}
+
+.icon {
+    width: 56px;
+    height: 24px;
+}

@@ -1,11 +1,14 @@
 import AboutUs from "../../components/AboutUs/AboutUs"
+import Container from "../../components/Container/Container"
 import Section from "../../components/Section/Section"
 
 const About = () => {
     return (
-        <Section>
-            <AboutUs />
-        </Section>
+        <Container>
+            <Section>
+                <AboutUs />
+            </Section>
+        </Container>
     )
 }
 

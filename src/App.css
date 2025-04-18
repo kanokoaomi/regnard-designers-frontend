@@ -1,15 +1,42 @@
+/* body {
+    position: relative;
+} */
+
+
 /* .swiper .swiper-slide {
     display: flex;
 } */
  
 .swiper {
     margin-top: 48px;
+    /* position: relative; */
+    margin-left: 210px;
+    margin-right: 210px;
 }
 
-.swiper-wrapper {
-    margin: 0 58px;
+.swiper-grid > .swiper-wrapper {
+    display: flex;
+    align-items: center;
+    /* margin: 0 58px 0 58px; */
     /* max-width: 1020px; */
     overflow: hidden;
+        /* margin-left: 210px;
+            margin-right: 210px; */
+}
+
+.swiper .swiper-button-prev {
+    color: #111111;
+    /* position: absolute; */
+    /* left: 96px; */
+}
+
+.swiper .swiper-button-next {
+    color: #111111;
+    /* position: absolute; */
+    /* right: 96px; */
+
+    /* margin-left: 32px;
+    margin-right: 32px; */
 }
 
 .title {

@@ -1,8 +1,9 @@
 import Section from '../../components/Section/Section'
 import CreationsList from '../../components/CreationsList/CreationsList'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { getAllPictures } from '../../redux/jewellery/jewelleryOperations';
+import Container from '../../components/Container/Container';
 // import { selectPictures } from '../../redux/jewellery/jewellerySelectors';
 
 const Creations = () => {
@@ -13,9 +14,11 @@ const Creations = () => {
     }, [dispatch]);
 
     return (
-        <Section>
-            <CreationsList />
-        </Section>
+        <Container>
+            <Section>
+                <CreationsList />
+            </Section>
+        </Container>
     )
 }
 
