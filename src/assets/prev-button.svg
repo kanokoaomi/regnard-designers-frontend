@@ -1,3 +1,3 @@
-<symbol id="icon-prev" viewBox="0 0 75 32">
-<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2.6667" d="M72.979 24.773c-18.847-9.434-42.677-8.933-52.236-7.503l-17.843 5.123M2.9 22.392l21.498-20.553M2.9 22.392l31.563 7.871"></path>
+<symbol id="icon-prev" fill="currentColor" viewBox="0 0 75 32">
+    <path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2.6667" d="M72.979 24.773c-18.847-9.434-42.677-8.933-52.236-7.503l-17.843 5.123M2.9 22.392l21.498-20.553M2.9 22.392l31.563 7.871"></path>
 </symbol>

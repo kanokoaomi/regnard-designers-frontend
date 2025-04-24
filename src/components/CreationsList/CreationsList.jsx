@@ -8,8 +8,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useSelector } from "react-redux";
 import { isLoading, selectPictures } from "../../redux/jewellery/jewellerySelectors";
-// import SlidePrevButton from "../Buttons/SlidePrevButton";
-// import SlideNextButton from "../Buttons/SlideNextButton";
+import SlidePrevButton from "../Buttons/SlidePrevButton";
+import SlideNextButton from "../Buttons/SlideNextButton";
 
 const CreationsList = () => {
 
@@ -35,7 +35,7 @@ const CreationsList = () => {
                     }}
                     spaceBetween={24}
                     // loop={true}
-                    navigation={true}
+                    // navigation={true}
                     // navigation={{
                     //     nextEl: '.swiper-button-next',
                     //     prevEl: '.swiper-button-prev',
@@ -50,7 +50,6 @@ const CreationsList = () => {
                     width={1020}
                 >
 
-                    {/* <SlidePrevButton /> */}
                     {/* <div className="swiper-wrapper"> */}
                     {pictures && pictures.length > 0 && (
                         pictures.map((picture) => (
@@ -59,6 +58,7 @@ const CreationsList = () => {
                             </SwiperSlide>
                         ))
                     )}
+                    <SlidePrevButton />
                     {/* <SlideNextButton /> */}
                     {/* <div className="prev-arrow" onClick={handlePrev} />
                     <div className="next-arrow" onClick={handleNext} /> */}

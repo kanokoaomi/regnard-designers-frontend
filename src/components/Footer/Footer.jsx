@@ -1,8 +1,9 @@
 import { ReactSVG } from 'react-svg';
 import regnardDesigners from "../../assets/regnard-designers.svg"
-import instagram from "../../assets/instagram.svg"
-import facebook from "../../assets/facebook.svg"
-
+// import instagram from "../../assets/instagram.svg"
+// import facebook from "../../assets/facebook.svg"
+import { FaSquareInstagram } from "react-icons/fa6";
+import { FaFacebookSquare } from "react-icons/fa";
 import styles from "./Footer.module.css"
 
 const Footer = () => {
@@ -17,12 +18,14 @@ const Footer = () => {
                 <a className={styles.link} href="tel:+32486414930">+ 32486414930</a>
             </address>
             <div className={styles.social}>
-                <p className={styles.q}>Click on the buttons to find us in social media:</p>
+                <p className={styles.q}>Or click on the buttons to find us in social media:</p>
                 <a target="_blank" href="https://www.instagram.com/regnardesigner/">
-                    <ReactSVG src={instagram} desc='Instagram icon' wrapper="div" className={styles.socialIcon} />
+                    {/* <ReactSVG src={instagram} desc='Instagram icon' wrapper="div" className={styles.socialIcon} /> */}
+                    <FaSquareInstagram className={styles.socialIcon} />
                 </a>
                 <a target="_blank" href="https://www.facebook.com/bijouterieregnard">
-                    <ReactSVG src={facebook} desc='Facebook icon' wrapper="div" className={styles.socialIcon} />
+                    {/* <ReactSVG src={facebook} desc='Facebook icon' wrapper="div" className={styles.socialIcon} /> */}
+                    <FaFacebookSquare className={styles.socialIcon} />
                 </a>
             </div>
         </div>
