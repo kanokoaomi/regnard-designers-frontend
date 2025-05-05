@@ -1,4 +1,9 @@
 .links {
+    display: none;
+}
+
+@media (min-width: 1158px) {
+.links {
     display: flex;
     gap: 28px;
     flex-direction: row;
@@ -19,4 +24,5 @@
 .link:hover {
     color: #efca01;
 
+}
 }
