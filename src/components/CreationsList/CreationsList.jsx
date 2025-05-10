@@ -10,8 +10,25 @@ import { useSelector } from "react-redux";
 import { isLoading, selectPictures } from "../../redux/jewellery/jewellerySelectors";
 import SlidePrevButton from "../Buttons/SlidePrevButton";
 import SlideNextButton from "../Buttons/SlideNextButton";
+import { useEffect, useState } from "react";
 
 const CreationsList = () => {
+
+    // to change ammount of rows in swiper by the screen size
+    const [gridRows, setGridRows] = useState(2);
+    useEffect(() => {
+        const mediaQuery = window.matchMedia('(max-width: 767px)');
+        const handleResize = () => {
+            setGridRows(mediaQuery.matches ? 1 : 2);
+        };
+        // first run
+        handleResize();
+        // listening changes
+        mediaQuery.addEventListener('change', handleResize);
+        return () => {
+            mediaQuery.removeEventListener('change', handleResize);
+        };
+    }, []);
 
     const pictures = useSelector(selectPictures);
     const Loading = useSelector(isLoading);
@@ -28,18 +45,24 @@ const CreationsList = () => {
                 <Swiper className={styles.swiper}
                     modules={[Grid, Pagination, Navigation]}
                     direction="horizontal"
-                    slidesPerView={3}
+                    breakpoints={{
+                        // when window width is >= 320px
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 20
+                        },
+                        // when window width is >= 768px
+                        768: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        },
+                    }}
+                    slidesPerView={gridRows === 1 ? 1 : 3}
                     grid={{
-                        rows: 2,
+                        rows: gridRows,
                         fill: "row",
                     }}
-                    spaceBetween={24}
-                    // loop={true}
-                    // navigation={true}
-                    // navigation={{
-                    //     nextEl: '.swiper-button-next',
-                    //     prevEl: '.swiper-button-prev',
-                    // }}
+                    spaceBetween={gridRows === 1 ? 20 : 24}
                     pagination={{
                         type: "progress",
                     }}
@@ -54,7 +77,10 @@ const CreationsList = () => {
                     {pictures && pictures.length > 0 && (
                         pictures.map((picture) => (
                             <SwiperSlide key={picture._id} className={styles.swiperSlide}>
-                                <img className={styles.picture} src={picture.pictureUrl} alt={picture.name} />
+                                <div className={styles.pictureContainer}>
+                                    <img className={styles.picture} src={picture.pictureUrl} alt={picture.name} />
+                                    <p className={styles.text}>{picture.name}</p>
+                                </div>
                             </SwiperSlide>
                         ))
                     )}
@@ -62,7 +88,6 @@ const CreationsList = () => {
                     {/* <SlideNextButton /> */}
                     {/* <div className="prev-arrow" onClick={handlePrev} />
                     <div className="next-arrow" onClick={handleNext} /> */}
-
                 </Swiper>
             </div>
 

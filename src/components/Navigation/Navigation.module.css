@@ -2,6 +2,8 @@
     display: none;
 }
 
+/* ========= DESKTOP ========= */
+
 @media (min-width: 1158px) {
 .links {
     display: flex;

@@ -1,20 +1,68 @@
-.titleContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 18px;
-    position: absolute;
-    top: 94px;
-    left: 516px;
+.container {
+    position: relative;
 }
 
+.titleContainer {
+    padding-top: 0;
+    padding-bottom: 6px;
+}
+
+.icon {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.picture {
+    position: absolute;
+    left: -24px;
+    top: 90px;
+    width: 320px;
+    height: 250px;
+    background: #717171;
+}
+
+.subTitle {
+    font-family: "Cormorant Garamond", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    padding-bottom: 310px;
+    text-align: center;
+}
+
+.button {
+    background-color: #ffffff;
+    border: 2px solid #efca01;
+    border-radius: 10px;
+
+    display: block;
+    padding: 16px 28px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #5d4037;
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.10s ease-in-out;
+}
+
+.button:active {
+    box-shadow: none;
+}
 
 /* ========= DESKTOP ========== */
 
 @media (min-width: 1158px) {
-.container {
-    position: relative;
-}
 
 .titleContainer {
     display: flex;
@@ -29,9 +77,11 @@
 .icon {
     width: 41px;
     height: 57px;
+    position: static;
 }
 
 .picture {
+    position: static;
     width: 740px;
     height: 483px;
     background: #717171;
@@ -42,28 +92,20 @@
     top: 179px;
     right: 0;
 
-    font-family: "Cormorant Garamond", sans-serif;
     font-weight: 500;
     font-size: 32px;
 }
 
 .button {
-    background-color: transparent;
-    border: 2px solid #efca01;
-    border-radius: 10px;
     cursor: pointer;
+    box-shadow: none;
 
     padding: 22px 42px;
     position: absolute;
     top: 360px;
     right: 0;
 
-    font-family: 'Cormorant Garamond', sans-serif;
-    font-weight: 600;
     font-size: 24px;
-    text-transform: uppercase;
-    color: #5d4037;
-    transition: box-shadow 0.15s ease-in;
 }
 
 .button:hover {

@@ -1,4 +1,13 @@
 .section {
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+/* ========== DESKTOP =========== */
+
+@media (min-width: 1158px) {
+.section {
     margin-top: 64px;
     margin-bottom: 64px;
+}
 }

@@ -5,6 +5,7 @@ import regnardDesigners from "../../assets/regnard-designers.svg"
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaFacebookSquare } from "react-icons/fa";
 import styles from "./Footer.module.css"
+import Line from '../Line/Line';
 
 const Footer = () => {
     return (
@@ -13,20 +14,23 @@ const Footer = () => {
                 <ReactSVG src={regnardDesigners} desc='Regnard Designers logo' wrapper="div" className={styles.icon} />
                 <p className={styles.q}>Contact us via e-mail or a call!</p>
             </div>
-            <address>
+            <address className={styles.address}>
                 <a className={styles.link} target="_blank" href="mailto:bijouterieregnard@outlook.be">bijouterieregnard@outlook.be</a><br />
                 <a className={styles.link} href="tel:+32486414930">+ 32486414930</a>
             </address>
+            <Line />
             <div className={styles.social}>
-                <p className={styles.q}>Or click on the buttons to find us in social media:</p>
-                <a target="_blank" href="https://www.instagram.com/regnardesigner/">
-                    {/* <ReactSVG src={instagram} desc='Instagram icon' wrapper="div" className={styles.socialIcon} /> */}
-                    <FaSquareInstagram className={styles.socialIcon} />
-                </a>
-                <a target="_blank" href="https://www.facebook.com/bijouterieregnard">
-                    {/* <ReactSVG src={facebook} desc='Facebook icon' wrapper="div" className={styles.socialIcon} /> */}
-                    <FaFacebookSquare className={styles.socialIcon} />
-                </a>
+                <p className={styles.qSecond}>Or click on the buttons to find us in social media:</p>
+                <div className={styles.socialIconsWrapper}>
+                    <a className={styles.a} target="_blank" href="https://www.instagram.com/regnardesigner/">
+                        {/* <ReactSVG src={instagram} desc='Instagram icon' wrapper="div" className={styles.socialIcon} /> */}
+                        <FaSquareInstagram className={styles.socialIcon} />
+                    </a>
+                    <a className={styles.a} target="_blank" href="https://www.facebook.com/bijouterieregnard">
+                        {/* <ReactSVG src={facebook} desc='Facebook icon' wrapper="div" className={styles.socialIcon} /> */}
+                        <FaFacebookSquare className={styles.socialIcon} />
+                    </a>
+                </div>
             </div>
         </div>
     )

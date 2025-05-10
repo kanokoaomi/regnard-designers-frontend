@@ -44,6 +44,8 @@
     font-weight: 600;
     font-size: 32px;
     color: #111111;
+    text-align: center;
+    line-height: 80%;
 }
 
 .yellowSpan {
@@ -53,5 +55,6 @@
 @media (min-width: 1158px) {
 .title {
     font-size: 64px;
+    text-align: inherit;
 }
 }

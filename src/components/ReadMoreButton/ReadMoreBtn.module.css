@@ -1,0 +1,29 @@
+.textWrapper {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+}
+
+.paragraph {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.button {
+    /* margin-top: 12px; */
+    background: none;
+    border: none;
+    color: #2b6cb0;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;
+    font-family: inherit;
+}
+
+.button:hover {
+    color: #1a4a7b;
+}
