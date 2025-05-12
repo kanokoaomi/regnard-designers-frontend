@@ -21,19 +21,21 @@
 }
 
 .picture {
-    position: absolute;
+    /* position: absolute;
     left: -24px;
-    top: 90px;
-    width: 320px;
+    top: 90px; */
+    width: 272px;
     height: 250px;
     background: #717171;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .subTitle {
     font-family: "Cormorant Garamond", sans-serif;
     font-weight: 600;
     font-size: 22px;
-    padding-bottom: 310px;
+    padding-bottom: 16px;
     text-align: center;
 }
 
@@ -46,6 +48,7 @@
     padding: 16px 28px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 16px;
 
     font-family: 'Cormorant Garamond', sans-serif;
     font-weight: 600;
@@ -81,6 +84,7 @@
 }
 
 .picture {
+    margin-left: 0;
     position: static;
     width: 740px;
     height: 483px;
@@ -104,6 +108,7 @@
     position: absolute;
     top: 360px;
     right: 0;
+    margin-top: 0;
 
     font-size: 24px;
 }

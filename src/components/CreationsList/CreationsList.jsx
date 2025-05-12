@@ -33,7 +33,6 @@ const CreationsList = () => {
     const pictures = useSelector(selectPictures);
     const Loading = useSelector(isLoading);
 
-    console.log("Loading:", Loading);
     if (Loading) {
         return <p>Loading...</p>;
     }
@@ -45,6 +44,11 @@ const CreationsList = () => {
                 <Swiper className={styles.swiper}
                     modules={[Grid, Pagination, Navigation]}
                     direction="horizontal"
+                    centeredSlides={true}
+                    loop={true}
+                    loopAddBlankSlides={true}
+                    // rewind={true}
+                    centeredSlidesBounds={true}
                     breakpoints={{
                         // when window width is >= 320px
                         320: {

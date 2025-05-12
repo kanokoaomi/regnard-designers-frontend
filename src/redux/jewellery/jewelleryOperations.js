@@ -11,9 +11,9 @@ export const getAllPictures = createAsyncThunk(
   "jewellery/getAllPictures",
   async (_, thunkApi) => {
     try {
-      console.log("Запит до сервера...");
+      // console.log("Запит до сервера...");
       const responce = await api.get("/jewellery/");
-      console.log("Запит успішно пройшов:", responce.data.data);
+      // console.log("Запит успішно пройшов:", responce.data.data);
       return responce.data.data;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);
