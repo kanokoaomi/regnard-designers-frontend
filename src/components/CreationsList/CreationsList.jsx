@@ -46,8 +46,8 @@ const CreationsList = () => {
                     direction="horizontal"
                     centeredSlides={true}
                     // loop={true}
-                    loopAddBlankSlides={true}
-                    // rewind={true}
+                    // loopAddBlankSlides={true}
+                    rewind={true}
                     centeredSlidesBounds={true}
                     breakpoints={{
                         // when window width is >= 320px
