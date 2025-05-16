@@ -8,7 +8,7 @@
 } */
  
 .swiper {
-    margin-top: 48px;
+    margin-top: 36px;
     /* position: relative; */
     margin-left: 210px;
     margin-right: 210px;
@@ -52,9 +52,29 @@
     color: #efca01;
 }
 
+/* ========== TABLET =========== */
+
+@media (min-width: 768px) {
+.title {
+    font-size: 48px;
+    text-align: inherit;
+}
+
+.swiper-grid > .swiper-wrapper {
+    margin: 0 58px 0 58px;
+}
+
+.swiper {
+    margin-top: 32px;
+}
+}
+
 @media (min-width: 1158px) {
 .title {
     font-size: 64px;
-    text-align: inherit;
+}
+
+.swiper {
+    margin-top: 48px;
 }
 }

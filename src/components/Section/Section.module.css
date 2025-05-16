@@ -3,7 +3,17 @@
     margin-bottom: 48px;
 }
 
-/* ========== DESKTOP =========== */
+/* ========== TABLET =========== */
+
+/* @media (min-width: 768px) {
+.section {
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+} */
+
+
+/* ========== DESKTOP ========== */
 
 @media (min-width: 1158px) {
 .section {

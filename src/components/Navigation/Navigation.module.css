@@ -2,15 +2,15 @@
     display: none;
 }
 
-/* ========= DESKTOP ========= */
 
-@media (min-width: 1158px) {
+/* ========== TABLET =========== */
+
+@media (min-width: 768px) {
 .links {
     display: flex;
     gap: 28px;
     flex-direction: row;
     justify-content: flex-end;
-    /* padding: 22px 0; */
     line-height: normal;
 }
 
@@ -22,9 +22,14 @@
     cursor: pointer;
     transition: color 0.15s ease-in;
 }
+}
+
+
+/* ========= DESKTOP ========= */
+
+@media (min-width: 1158px) {
 
 .link:hover {
     color: #efca01;
-
 }
 }

@@ -1,6 +1,6 @@
 .title {
     text-align: end;
-    margin-bottom: 45px;
+    margin-bottom: 22px;
 }
 
 .container {
@@ -24,22 +24,33 @@
     text-align: center;
 }
 
-.avatar {
+.nameForAdaptive, .nameForAdaptiveTwo {
+    display: none;
+}
+
+.avatar, .avatarTwo {
     order: 1;
     width: 242px;
     height: 242px;
     background-color: burlywood;
 }
 
-.marginBottom {
-    margin-bottom: 8px;
-}
+/* .avatarTwo {
+    order: 1;
+    width: 242px;
+    height: 242px;
+    background-color: burlywood;
+} */
 
-.textWrapper {
+/* .marginBottom {
+    margin-bottom: 8px;
+} */
+
+.textWrapper, .textWrapperTwo {
     order: 2;
 }
 
-.text {
+.text, .textTwo {
     order: 2;
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
@@ -48,14 +59,66 @@
     margin-bottom: 8px;
 }
 
+/* ========== TABLET =========== */
+
+@media (min-width: 768px) {
+    .title {
+        margin-bottom: 32px;
+    }
+
+    .infoContainer {
+        display: block;
+    }
+
+    .avatar {
+        min-width: 350px;
+        height: 350px;
+        float: left;
+        margin-right: 24px;
+        margin-bottom: 24px;
+    }
+
+    .avatarTwo {
+        min-width: 350px;
+        height: 350px;
+        float: right;
+        margin-left: 24px;
+        /* margin-bottom: 24px; */
+    }
+
+    .name {
+        display: none;
+    }
+
+    .nameForAdaptive {
+        display: inline;
+        font-family: "Cormorant Garamond", sans-serif;
+        font-weight: 600;
+        font-size: 32px;
+    }
+
+    .nameForAdaptiveTwo {
+        display: block;
+        font-family: "Cormorant Garamond", sans-serif;
+        font-weight: 600;
+        font-size: 32px;
+        text-align: right;
+    }
+
+    .text, .textTwo {
+        font-weight: 400;
+        font-size: 16px;
+        text-align: justify;
+        line-height: 130%;
+    }
+}
+
+
 /* ========= DESKTOP ========== */
 
 @media (min-width: 1158px) {
-
-.name {
-    order: 1;
-    font-size: 48px;
-    display: block;
+.title {
+    margin-bottom: 46px;
 }
 
 .avatar {
@@ -64,11 +127,20 @@
     height: 400px;
 }
 
+.avatarTwo {
+    order: 2;
+    width: 400px;
+    height: 400px;
+}
+
+.textWrapperTwo {
+    order: 1;
+}
+
 .infoContainer {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 38px;
 }
 
 .text {
@@ -76,10 +148,19 @@
     font-size: 16px;
     margin-bottom: 8px;
     text-align: start;
+    line-height: unset;
 }
 
-.textContainer {
+.textTwo {
+    max-width: 684px;
+    font-size: 16px;
+    margin-bottom: 8px;
     text-align: end;
+    line-height: unset;
 }
+
+/* .textContainer {
+    text-align: end;
+} */
 
 }

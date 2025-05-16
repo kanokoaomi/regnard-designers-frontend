@@ -45,7 +45,7 @@ const CreationsList = () => {
                     modules={[Grid, Pagination, Navigation]}
                     direction="horizontal"
                     centeredSlides={true}
-                    loop={true}
+                    // loop={true}
                     loopAddBlankSlides={true}
                     // rewind={true}
                     centeredSlidesBounds={true}

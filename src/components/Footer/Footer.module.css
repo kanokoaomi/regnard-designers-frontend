@@ -74,7 +74,7 @@
 
 /* ========= DESKTOP ========== */
 
-@media (min-width: 1158px) {
+@media (min-width: 768px) {
 
 .background {
     padding: 64px 0 148px 0;

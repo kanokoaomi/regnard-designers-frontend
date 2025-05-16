@@ -63,6 +63,43 @@
     box-shadow: none;
 }
 
+/* ========== TABLET =========== */
+
+@media (min-width: 768px) {
+.picture {
+    width: 680px;
+    height: 453px;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+    justify-content: center;
+}
+
+.icon {
+    width: 25px;
+    height: 31px;
+    position: static;
+    clip-path: none;
+}
+
+.subTitle {
+    font-size: 24px;
+    padding-bottom: 32px;
+}
+
+.button {
+    padding: 22px 42px;
+    font-size: 24px;
+    margin-top: 32px;
+}
+
+}
+
+
 /* ========= DESKTOP ========== */
 
 @media (min-width: 1158px) {
@@ -88,7 +125,6 @@
     position: static;
     width: 740px;
     height: 483px;
-    background: #717171;
 }
 
 .subTitle {
@@ -104,13 +140,10 @@
     cursor: pointer;
     box-shadow: none;
 
-    padding: 22px 42px;
     position: absolute;
     top: 360px;
     right: 0;
     margin-top: 0;
-
-    font-size: 24px;
 }
 
 .button:hover {

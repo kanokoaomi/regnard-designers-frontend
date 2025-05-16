@@ -17,6 +17,17 @@
     height: 24px;
 }
 
+/* ========== TABLET =========== */
+
+@media (min-width: 768px) {
+.header {
+    padding: 11px 16px;
+}
+}
+
+
+/* ========== DESKTOP =========== */
+
 @media (min-width: 1158px) {
 .header {
     padding: 11px 96px;
