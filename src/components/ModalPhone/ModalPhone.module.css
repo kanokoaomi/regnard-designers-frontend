@@ -1,0 +1,31 @@
+.modalOverlay {
+    background-color: rgba(0, 0, 0, 0.25);
+
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 1;
+    pointer-events: auto; 
+    transition: opacity 250ms ease-in-out;
+}
+
+.modal {
+    z-index: 999;
+    background-color: #fff;
+    padding: 16px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 284px;
+    height: 100%;
+}
+
+.button {
+    position: absolute;
+    right: 25px;
+    top: 16px;
+}
