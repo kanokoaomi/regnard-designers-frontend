@@ -7,7 +7,6 @@ import ModalPhone from "../ModalPhone/ModalPhone";
 
 const Header = ({ children }) => {
 
-
     return (
         <div>
             <div className={styles.header}>

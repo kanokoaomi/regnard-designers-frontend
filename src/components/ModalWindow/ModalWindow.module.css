@@ -20,5 +20,7 @@
 }
 
 .button {
-    margin-left: auto;
+    position: absolute;
+    right: 25px;
+    top: 16px;
 }

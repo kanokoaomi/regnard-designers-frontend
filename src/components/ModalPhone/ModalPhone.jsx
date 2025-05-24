@@ -3,6 +3,7 @@ import styles from "./ModalPhone.module.css"
 import { ReactSVG } from 'react-svg';
 // import regnardDesigners from "../../assets/next-button.svg"
 import { useState } from "react";
+import ModalWindow from "../ModalWindow/ModalWindow";
 
 const ModalPhone = () => {
 
@@ -10,17 +11,12 @@ const ModalPhone = () => {
 
     return (
         <div>
-            <button onClick={() => setIsOpen(true)}>
+            <button className={styles.button} onClick={() => setIsOpen(true)}>
                 ✅
                 {/* <ReactSVG src={regnardDesigners} desc='BurgerMenu icon' wrapper="div" className={styles.iconBurger} /> */}
             </button>
             {isOpen && (
-                <div className={styles.modalOverlay}>
-                    <div className={styles.modal}>
-                        <button className={styles.button} onClick={() => setIsOpen(false)}>❌</button>
-                        <Navigation />
-                    </div>
-                </div>
+                <ModalWindow setIsOpen={setIsOpen} />
             )}
 
         </div>

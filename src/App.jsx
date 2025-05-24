@@ -1,4 +1,6 @@
 import './App.css'
+import Header from './components/Header/Header'
+import ModalPhone from './components/ModalPhone/ModalPhone'
 import About from './pages/About/About'
 import Contacts from './pages/Contacts/Contacts'
 import Creations from './pages/Creations/Creations'
@@ -10,6 +12,8 @@ function App() {
   return (
     <div>
       {/* <Container> */}
+      <Header />
+      {/* <ModalPhone /> */}
       <HomePage />
       <Creations />
       <About />

@@ -14,6 +14,10 @@
     margin-right: 210px;
 }
 
+.swiper .swiper-slide {
+    align-self: center;
+}
+
 .swiper-grid > .swiper-wrapper {
     display: flex;
     align-items: center;
