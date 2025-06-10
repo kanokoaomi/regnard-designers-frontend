@@ -1,6 +1,7 @@
 import styles from "./MainScreen.module.css"
 import { ReactSVG } from 'react-svg';
 import regnardDesigners from "../../assets/regnard-designers.svg"
+import togetherImage from "../../images/together.jpg";
 
 const MainScreen = () => {
     return (
@@ -10,7 +11,9 @@ const MainScreen = () => {
                 <ReactSVG src={regnardDesigners} desc='Regnard Designers logo' wrapper="div" className={styles.icon} />
             </div>
             <h2 className={styles.subTitle}>Jewellery creations</h2>
-            <div className={styles.picture}></div>
+            <div className={styles.picture}>
+                <img src={togetherImage} alt="photo of Stephan and Maxime together" />
+            </div>
             <button className={styles.button}>Make an order</button>
         </div>
     )

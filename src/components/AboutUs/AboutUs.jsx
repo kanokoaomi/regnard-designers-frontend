@@ -1,6 +1,8 @@
 import Line from "../Line/Line"
 import ReadMoreBtn from "../ReadMoreButton/ReadMoreBtn"
 import styles from "./AboutUs.module.css"
+import StephanPhoto from "../../images/Stephan.jpg";
+import MaximePhoto from "../../images/Maxime.jpg";
 
 const AboutUs = () => {
     return (
@@ -25,7 +27,9 @@ const AboutUs = () => {
                 {/* </div> */}
 
                 <div className={styles.infoContainer}>
-                    <div className={styles.avatar}></div>
+                    <div className={styles.avatar}>
+                        <img src={StephanPhoto} alt="photo of Stephan" />
+                    </div>
                     <h3 className={styles.name}>Stephan</h3>
                     <div className={styles.textWrapper}>
                         <h3 className={styles.nameForAdaptive}>Stephan</h3>
@@ -40,10 +44,13 @@ const AboutUs = () => {
                 <Line />
                 <div className={styles.infoContainer}>
                     <h3 className={styles.name}>Maxime</h3>
-                    <div className={styles.avatarTwo}></div>
+                    <div className={styles.avatarTwo}>
+                        <img src={MaximePhoto} alt="photo of Maxime" />
+                    </div>
                     <div className={styles.textWrapperTwo}>
                         <h3 className={styles.nameForAdaptiveTwo}>Maxime</h3>
-                        <p className={styles.textTwo}>Lorem ipsum dolor sit amet consectetur. Euismod lacus commodo quis consequat donec blandit velit dolor elit. Platea lectus mauris egestas sit. Lacus pharetra lorem purus nunc augue scelerisque lacus vitae. Dignissim duis tellus ut nec porta mauris aliquam nunc pellentesque.Lorem ipsum dolor sit amet consectetur. Euismod lacus commodo quis consequat donec blandit velit dolor elit. Platea lectus mauris egestas sit. Lacus pharetra lorem purus nunc augue scelerisque lacus vitae. Dignissim duis tellus ut nec porta mauris aliquam nunc pellentesque.</p>
+                        <p className={styles.textTwo}>"Unleash your freedom with our jewelry! Before creating, I mastered personal development. Inspired by Sai Maa, I learned to reveal myself. Art evolves by knowing oneself. Thanks to my studies in Fine Arts and my visits to museums, I create unique pieces. Jewelry-making awakened my soul and freed my creativity. Each piece carries this passionate fire. My mentor, Bernard Biernaux, shaped my talent and led me to excellence. At RegnarDesigner, integrity, creativity, and excellence guide our work. Ethical materials, transparent craftsmanship, and a relentless pursuit of innovation — that is our commitment."</p>
+                        <p className={styles.textTwo}><b>Maxime</b></p>
                     </div>
 
                 </div>

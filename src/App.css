@@ -16,6 +16,7 @@
 
 .swiper .swiper-slide {
     align-self: center;
+    margin-right: 40px;
 }
 
 .swiper-grid > .swiper-wrapper {
@@ -80,5 +81,9 @@
 
 .swiper {
     margin-top: 48px;
+}
+
+.swiper-grid>.swiper-wrapper {
+    margin: 0;
 }
 }
