@@ -1,18 +1,29 @@
 import styles from "./Header.module.css"
 import { ReactSVG } from 'react-svg';
 import regnardDesigners from "../../assets/regnard-designers.svg"
+import burger from "../../assets/burgerMenu.svg"
 import Navigation from "../Navigation/Navigation";
-import ModalPhone from "../ModalPhone/ModalPhone";
-
+import ModalWindow from "../ModalWindow/ModalWindow.jsx";
+import { useState } from "react";
 
 const Header = ({ children }) => {
+
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <div>
             <div className={styles.header}>
                 <ReactSVG src={regnardDesigners} desc='Regnard Designers logo' wrapper="div" className={styles.icon} />
-                <Navigation />
-                <ModalPhone />
+                <div className={styles.desktopNav}>
+                    <Navigation />
+                </div>
+
+                <button className={styles.button} onClick={() => setIsOpen(true)}>
+                    <ReactSVG src={burger} desc='BurgerMenu icon' wrapper="div" className={styles.iconBurger} />
+                </button>
+                {isOpen && (
+                    <ModalWindow onClose={() => setIsOpen(false)} setIsOpen={setIsOpen} />
+                )}
             </div>
             {children}
         </div>

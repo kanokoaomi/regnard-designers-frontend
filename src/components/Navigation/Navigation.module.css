@@ -1,18 +1,6 @@
-.links {
+/* .links {
     display: none;
-}
-
-
-/* ========== TABLET =========== */
-
-@media (min-width: 768px) {
-.links {
-    display: flex;
-    gap: 28px;
-    flex-direction: row;
-    justify-content: flex-end;
-    line-height: normal;
-}
+} */
 
 .link {
     font-family: "Cormorant Garamond", sans-serif;
@@ -22,6 +10,34 @@
     cursor: pointer;
     transition: color 0.15s ease-in;
 }
+
+.links {
+    margin-top: 110px;
+    display: flex;
+    gap: 28px;
+    flex-direction: column;
+    justify-content: center;
+    line-height: normal;
+    align-items: center;
+}
+
+
+/* ========== TABLET =========== */
+
+@media (min-width: 768px) {
+.links {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 0;
+}
+
+.link {
+    font-size: 20px;
+    font-variant: all-small-caps;
+    cursor: pointer;
+    transition: color 0.15s ease-in;
+}
+
 }
 
 

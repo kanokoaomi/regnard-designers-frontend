@@ -6,7 +6,7 @@ import MaximePhoto from "../../images/Maxime.jpg";
 
 const AboutUs = () => {
     return (
-        <div>
+        <div id="about">
             <div className={styles.title}><h2 className="title">About <span className="yellowSpan">Us</span></h2></div>
             <div className={styles.container}>
                 {/* <div className={styles.infoContainer}>

@@ -20,13 +20,47 @@
     height: 24px;
 }
 
-/* .iconBurger {
+.iconBurger {
     width: 16px;
     height: 24px;
-    position: fixed; 
+    /* position: fixed; 
     right: 25px;
-    top: 16px;
-} */
+    top: 16px; */
+    fill: black;
+    stroke: black;
+}
+
+.modalOverlay {
+    background-color: rgba(0, 0, 0, 0.25);
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.modal {
+    background-color: #fff;
+    padding: 16px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 264px;
+    height: 100vh;
+}
+
+.button {
+    margin-left: auto;
+    background-color: transparent;
+    border: 0;
+
+}
+
+.desktopNav {
+    display: none;
+}
+
 
 /* ========== TABLET =========== */
 
@@ -34,8 +68,15 @@
 .header {
     padding: 11px 16px;
 }
+
+.desktopNav {
+    display: block;
 }
 
+.button {
+    display: none;
+}
+}
 
 /* ========== DESKTOP =========== */
 

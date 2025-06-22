@@ -1,11 +1,12 @@
 import styles from "./MainScreen.module.css"
-import { ReactSVG } from 'react-svg';
 import regnardDesigners from "../../assets/regnard-designers.svg"
 import togetherImage from "../../images/together.jpg";
+import { ReactSVG } from 'react-svg';
+import { Link } from 'react-scroll';
 
 const MainScreen = () => {
     return (
-        <div className={styles.container}>
+        <div id="home" className={styles.container}>
             <div className={styles.titleContainer}>
                 <h1 className="title"><span className="yellowSpan">Regnar</span>Designers</h1>
                 <ReactSVG src={regnardDesigners} desc='Regnard Designers logo' wrapper="div" className={styles.icon} />
@@ -14,7 +15,9 @@ const MainScreen = () => {
             <div className={styles.picture}>
                 <img src={togetherImage} alt="photo of Stephan and Maxime together" />
             </div>
-            <button className={styles.button}>Make an order</button>
+            <Link to="contacts" smooth={true} >
+                <button className={styles.button}>Make an order</button>
+            </Link>
         </div>
     )
 }

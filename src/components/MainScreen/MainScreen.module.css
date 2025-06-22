@@ -81,12 +81,12 @@
     justify-content: center;
 }
 
-.icon {
+/* .icon {
     width: 25px;
     height: 31px;
     position: static;
     clip-path: none;
-}
+} */
 
 .subTitle {
     font-size: 24px;
@@ -113,14 +113,12 @@
     gap: 18px;
     position: absolute;
     top: 94px;
-    left: 516px;
+    right: 0;
 }
 
-.icon {
-    width: 41px;
-    height: 57px;
+/* .icon {
     position: static;
-}
+} */
 
 .picture {
     margin-left: 0;

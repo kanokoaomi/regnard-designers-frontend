@@ -9,7 +9,7 @@ import Line from '../Line/Line';
 
 const Footer = () => {
     return (
-        <div className={styles.background}>
+        <div id='contacts' className={styles.background}>
             <div className={styles.question}>
                 <ReactSVG src={regnardDesigners} desc='Regnard Designers logo' wrapper="div" className={styles.icon} />
                 <p className={styles.q}>Contact us via e-mail or a call!</p>

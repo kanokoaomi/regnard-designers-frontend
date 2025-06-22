@@ -31,7 +31,7 @@
 .avatar, .avatarTwo {
     order: 1;
     width: 242px;
-    height: 242px;
+    /* height: 242px; */
     background-color: burlywood;
 }
 

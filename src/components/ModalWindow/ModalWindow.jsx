@@ -1,11 +1,11 @@
 import Navigation from "../Navigation/Navigation"
 import styles from "./ModalWindow.module.css"
 
-const ModalWindow = ({ setIsOpen }) => {
+const ModalWindow = ({ onClose }) => {
   return (
-    <div className={styles.modalOverlay}>
-      <div className={styles.modal}>
-        <button className={styles.button} onClick={() => setIsOpen(false)}>❌</button>
+    <div onClick={onClose} className={styles.modalOverlay}>
+      <div onClick={(e) => e.stopPropagation()} className={styles.modal}>
+        <button className={styles.button} onClick={onClose}>❌</button>
         <Navigation />
       </div>
     </div>

@@ -38,7 +38,7 @@ const CreationsList = () => {
     }
 
     return (
-        <>
+        <div id="creations">
             <h2 className="title">Discover our <span className="yellowSpan">creations</span></h2>
             <div className={styles.swiperContainer}>
                 <Swiper className={styles.swiper}
@@ -95,7 +95,7 @@ const CreationsList = () => {
                 </Swiper>
             </div>
 
-        </>
+        </div>
     )
 }
 
