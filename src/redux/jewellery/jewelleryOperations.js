@@ -1,11 +1,12 @@
-import axios from "axios";
+// import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
+import { api } from "../../utils/api";
 
-const api = axios.create({
-  baseURL: "https://regnard-designers-backend.onrender.com/",
-  // baseURL: 'http://localhost:3000/api/',
-  //   headers: { "Content-Type": "application/json" },
-});
+// const api = axios.create({
+//   baseURL: "https://regnard-designers-backend.onrender.com/",
+//   // baseURL: 'http://localhost:3000/api/',
+//   //   headers: { "Content-Type": "application/json" },
+// });
 
 export const getAllPictures = createAsyncThunk(
   "jewellery/getAllPictures",

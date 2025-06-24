@@ -12,6 +12,7 @@ import {
   REGISTER,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
+import { authReducer } from "./auth/authSlice";
 
 const jewellerysConfig = {
   key: "jewellerysKey",
@@ -19,9 +20,16 @@ const jewellerysConfig = {
   //   whitelist: [""], // blacklist: [""]
 };
 
+const authConfig = {
+  key: "authKey",
+  storage,
+  whitelist: ["token"], // blacklist: [""]
+};
+
 export const store = configureStore({
   reducer: {
     jewellery: persistReducer(jewellerysConfig, jewelleryReducer),
+    auth: persistReducer(authConfig, authReducer),
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

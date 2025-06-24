@@ -5,6 +5,7 @@ import burger from "../../assets/burgerMenu.svg"
 import Navigation from "../Navigation/Navigation";
 import ModalWindow from "../ModalWindow/ModalWindow.jsx";
 import { useState } from "react";
+import Register from "../../pages/Register/Register.jsx";
 
 const Header = ({ children }) => {
 
@@ -24,6 +25,9 @@ const Header = ({ children }) => {
                 {isOpen && (
                     <ModalWindow onClose={() => setIsOpen(false)} setIsOpen={setIsOpen} />
                 )}
+
+                {/* <Register /> */}
+
             </div>
             {children}
         </div>
