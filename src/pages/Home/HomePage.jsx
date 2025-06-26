@@ -7,6 +7,7 @@ import Section from "../../components/Section/Section"
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { getAllPictures } from '../../redux/jewellery/jewelleryOperations';
+import Header from "../../components/Header/Header.jsx"
 
 const HomePage = () => {
 
@@ -17,6 +18,7 @@ const HomePage = () => {
 
     return (
         <div>
+            <Header />
             <Container>
                 <Section>
                     <MainScreen />

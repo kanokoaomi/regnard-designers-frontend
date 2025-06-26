@@ -1,4 +1,5 @@
 import Navigation from "../Navigation/Navigation"
+import NavLinks from "../NavLinks/NavLinks"
 import styles from "./ModalWindow.module.css"
 
 const ModalWindow = ({ onClose }) => {
@@ -7,6 +8,7 @@ const ModalWindow = ({ onClose }) => {
       <div onClick={(e) => e.stopPropagation()} className={styles.modal}>
         <button className={styles.button} onClick={onClose}>❌</button>
         <Navigation />
+        <NavLinks />
       </div>
     </div>
   )

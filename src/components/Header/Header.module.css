@@ -70,7 +70,9 @@
 }
 
 .desktopNav {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 64px;
 }
 
 .button {
@@ -84,4 +86,8 @@
 .header {
     padding: 11px 96px;
 }
+
+/* .desktopNav {
+    gap: 64px;
+} */
 }
