@@ -1,26 +1,28 @@
 import { Formik, Form, Field, ErrorMessage } from "formik"
 import { useId } from 'react';
 import { RegisterSchema } from "../../utils/schemas";
-import { registerUser } from "../../redux/auth/authOperations";
 import { useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import styles from "./Forms.module.css"
+import { SuccessToast } from "../../utils/successToast.js";
+import { ErrorToast } from "../../utils/errorToast.js";
+// import { selectIsLoggedIn } from "../../redux/auth/authSelections.js";
 
 
-const INITIAL_VALUES = {
-    name: "",
-    email: "",
-    password: ""
-}
+const Forms = ({ initValues, textToLink, link, text, title, isLogin, button, func, goodMessage, schema }) => {
 
-const Forms = ({ textToLink, link, text, title, isLogin, button }) => {
-
+    // const [isLoggedIn, setIsLoggedIn] = useState(useSelector(selectIsLoggedIn));
     const dispatch = useDispatch()
 
     const handleSubmit = (values, actions) => {
-        console.log(values);
-        dispatch(registerUser(values));
-        actions.resetForm();
+        try {
+            dispatch(func(values));
+            actions.resetForm();
+            SuccessToast(goodMessage);
+        } catch (error) {
+            console.log(error.data.message);
+            ErrorToast(error.data.message)
+        }
     };
 
     const nameId = useId();
@@ -28,9 +30,9 @@ const Forms = ({ textToLink, link, text, title, isLogin, button }) => {
     const pwdId = useId();
 
     return (
-        <Formik initialValues={INITIAL_VALUES}
+        <Formik initialValues={initValues}
             onSubmit={handleSubmit}
-            validationSchema={RegisterSchema}
+            validationSchema={schema}
         >
             <div className={styles.container}>
                 <h2 className={styles.title}>{title}</h2>
@@ -59,6 +61,7 @@ const Forms = ({ textToLink, link, text, title, isLogin, button }) => {
 
                 <p className={styles.text}>{text}<NavLink className={styles.link} to={link}>{textToLink}</NavLink></p>
                 <p className={styles.textTwo}>Or continue <NavLink className={styles.link} to={"/"}>without an account</NavLink></p>
+                {/* <button className={styles.noButton} onClick={() => { setIsLoggedIn(false) }}> </button> */}
             </div>
         </Formik>
     )

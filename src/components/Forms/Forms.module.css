@@ -68,6 +68,13 @@
     color: #efca01;
 }
 
+.noButton {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
 /* ========== TABLET =========== */
 
 @media (min-width: 768px) {
