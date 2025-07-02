@@ -33,7 +33,7 @@ export const loginUser = createAsyncThunk(
   async (formData, thunkAPI) => {
     try {
       const { data } = await api.post("auth/login", formData);
-      console.log(data);
+      // console.log(data);
       setToken(data.accessToken);
 
       return data;

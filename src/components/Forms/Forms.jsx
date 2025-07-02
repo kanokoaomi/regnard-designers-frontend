@@ -1,29 +1,37 @@
 import { Formik, Form, Field, ErrorMessage } from "formik"
-import { useId } from 'react';
+import { useEffect, useId } from 'react';
 import { RegisterSchema } from "../../utils/schemas";
-import { useDispatch } from "react-redux";
-import { NavLink } from "react-router-dom";
-import styles from "./Forms.module.css"
+import { useDispatch, useSelector } from "react-redux";
+import { Navigate, NavLink, useNavigate } from "react-router-dom";
 import { SuccessToast } from "../../utils/successToast.js";
 import { ErrorToast } from "../../utils/errorToast.js";
-// import { selectIsLoggedIn } from "../../redux/auth/authSelections.js";
+import { isLoading, selectIsLoggedIn } from "../../redux/auth/authSelections.js";
+import styles from "./Forms.module.css"
+import Loader from "../Loader/Loader.jsx";
 
 
 const Forms = ({ initValues, textToLink, link, text, title, isLogin, button, func, goodMessage, schema }) => {
 
-    // const [isLoggedIn, setIsLoggedIn] = useState(useSelector(selectIsLoggedIn));
+    const isLoggedIn = useSelector(selectIsLoggedIn);
+    const isloading = useSelector(isLoading);
     const dispatch = useDispatch()
+    const navigate = useNavigate();
 
-    const handleSubmit = (values, actions) => {
+    const handleSubmit = async (values, actions) => {
         try {
-            dispatch(func(values));
+            await dispatch(func(values)).unwrap();
             actions.resetForm();
             SuccessToast(goodMessage);
         } catch (error) {
-            console.log(error.data.message);
             ErrorToast(error.data.message)
         }
     };
+
+    useEffect(() => {
+        if (isLoggedIn) {
+            navigate('/');
+        }
+    }, [isLoggedIn, navigate]);
 
     const nameId = useId();
     const emailId = useId();
@@ -35,6 +43,7 @@ const Forms = ({ initValues, textToLink, link, text, title, isLogin, button, fun
             validationSchema={schema}
         >
             <div className={styles.container}>
+                {isloading && <Loader />}
                 <h2 className={styles.title}>{title}</h2>
                 <Form className={styles.form}>
                     {!isLogin &&

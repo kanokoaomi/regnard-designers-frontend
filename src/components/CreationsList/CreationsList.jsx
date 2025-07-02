@@ -11,6 +11,7 @@ import { isLoading, selectPictures } from "../../redux/jewellery/jewellerySelect
 import SlidePrevButton from "../Buttons/SlidePrevButton";
 import SlideNextButton from "../Buttons/SlideNextButton";
 import { useEffect, useState } from "react";
+import Loader from "../Loader/Loader";
 
 const CreationsList = () => {
 
@@ -34,6 +35,7 @@ const CreationsList = () => {
     const Loading = useSelector(isLoading);
 
     if (Loading) {
+        // return <Loader />
         return <p>Loading...</p>;
     }
 
@@ -77,6 +79,7 @@ const CreationsList = () => {
                     width={1020}
                 >
 
+                    {/* {Loading && <Loader />} */}
                     {/* <div className="swiper-wrapper"> */}
                     {pictures && pictures.length > 0 && (
                         pictures.map((picture) => (
