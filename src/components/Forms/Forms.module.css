@@ -105,3 +105,13 @@
         margin-top: 12px;
     }
 }
+
+/* ========= DESKTOP ========== */
+
+@media (min-width: 1158px) {
+    .rings {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}

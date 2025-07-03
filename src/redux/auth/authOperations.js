@@ -46,3 +46,24 @@ export const loginUser = createAsyncThunk(
     }
   }
 );
+
+export const refreshUser = createAsyncThunk(
+  "auth/refresh",
+  async (_, thunkAPI) => {
+    const state = thunkAPI.getState();
+    const token = state.auth.token;
+    if (!token) return thunkAPI.rejectWithValue("No valid token to refresh");
+
+    try {
+      setToken(token);
+      const { data } = await api.post("auth/refresh");
+      return data;
+    } catch (error) {
+      console.error(
+        "Error response from server:",
+        error.response?.data || error.message
+      );
+      return thunkAPI.rejectWithValue(error.response?.data || error.message);
+    }
+  }
+);

@@ -4,8 +4,17 @@ import HomePage from './pages/Home/HomePage'
 import Register from './pages/Register/Register'
 import Login from './pages/Login/Login'
 import { Toaster } from 'react-hot-toast'
+import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { refreshUser } from './redux/auth/authOperations'
 
 function App() {
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch])
+
 
   return (
     <div>

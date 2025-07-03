@@ -1,18 +1,13 @@
-import { Oval } from 'react-loader-spinner'
 import styles from "./Loader.module.css"
+import { BeatLoader } from "react-spinners";
+
 
 const Loader = () => {
     return (
-        <div >
-            <Oval
-                visible={true}
-                height="40"
-                width="40"
-                color="#efca01"
-                secondaryColor="#5d4037"
-                ariaLabel="oval-loading"
-                wrapperClass={styles.wrapper}
-            />
+        <div className={styles.div}>
+            <div className={styles.wrapper}>
+                <BeatLoader color="#efca01" size={30} />
+            </div>
         </div>
     )
 }

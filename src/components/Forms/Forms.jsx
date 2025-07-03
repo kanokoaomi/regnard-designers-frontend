@@ -68,6 +68,8 @@ const Forms = ({ initValues, textToLink, link, text, title, isLogin, button, fun
                     <button className="button" type="submit">{button}</button>
                 </Form>
 
+                {/* <div className={styles.rings}><img src='../../images/ringsForForm.png' alt="picture" /></div> */}
+
                 <p className={styles.text}>{text}<NavLink className={styles.link} to={link}>{textToLink}</NavLink></p>
                 <p className={styles.textTwo}>Or continue <NavLink className={styles.link} to={"/"}>without an account</NavLink></p>
                 {/* <button className={styles.noButton} onClick={() => { setIsLoggedIn(false) }}> </button> */}
