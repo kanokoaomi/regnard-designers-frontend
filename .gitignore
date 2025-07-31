@@ -22,3 +22,35 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+ // "regiter": {
+    //     "title": "Register",
+    //     "name": "Name",
+    //     "pwd": "Password",
+    //     "makeIt": "Create an account",
+    //     "already": "Already have an account?",
+    //     "login": "Log in",
+    //     "continue": "Or continue",
+    //     "without": "without an account",
+    //     "goodMessage": "Successfully registered!"
+    // },
+
+    "regiter": {
+        "title": "Registreren",
+        "name": "Naam",
+        "pwd": "Wachtwoord",
+        "makeIt": "Maak een account aan",
+        "already": "Heb je al een account?",
+        "login": "Inloggen",
+        "without": "Of ga verder zonder account"
+    },
+
+        "regiter": {
+        "title": "S'inscrire",
+        "name": "Nom",
+        "pwd": "Mot de passe",
+        "makeIt": "Créer un compte",
+        "already": "Vous avez déjà un compte ?",
+        "login": "Se connecter",
+        "without": "Ou continuer sans compte"
+    },

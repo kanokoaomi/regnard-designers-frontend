@@ -1,4 +1,10 @@
 {
+    "links": {
+        "home": "Home",
+        "creations": "creaties",
+        "about": "Over ons",
+        "contacts": "Contacten"
+    },
     "subtitle": "Sieradencreatie",
     "button": "een bestelling plaatsen",
     "section2": "Ontdek onze",
@@ -10,5 +16,7 @@
         "aboutStephan2": "Mijn drijfveer was het onthullen van hun verborgen pracht en deze fascinatie leidde tot mijn creaties. Ik ontwikkelde een passie om kunst, goud en edelstenen te verwerken tot juwelen. Geïnspireerd door grote meesters vertaal ik sieraden met mijn eigen medium: het goud. Mijn reizen doorheen Azië en mijn diepe band met Brazilië hebben mijn werk beïnvloed. De levendige kleuren en de cultuur van dit grote Latijns-Amerikaanse land inspireren mijn creativiteit. Ik tracht een bruggenbouwer te zijn en te fungeren tussen verschillende culturen en tijdperken waarbij traditioneel vakmanschap en modern design elkaar aanvullen.",
         "aboutStephan3": "Het proces van juweelcreatie begint met schetsen en ontwerpen en eindigt bij het juweel. In mijn atelier teken en smeed ik met veel precisie waardoor mijn creaties uitingen zijn van schoonheid en hedendaagse techniek.”"
     },
-    "aboutMaxime": "Ontketen je vrijheid met onze juwelen! Voordat ik creëerde, beheerste ik persoonlijke ontwikkeling. Geïnspireerd door Sai Maa leerde ik mezelf te onthullen. Kunst evolueert door zelfkennis. Dankzij mijn studies in Schone Kunsten en mijn bezoeken aan musea creëer ik unieke stukken. De juwelenkunst heeft mijn ziel doen ontwaken en mijn creativiteit bevrijd. Elk stuk draagt deze vurige passie. Mijn mentor, Bernard Biernaux, heeft mijn talent gescherpt en mij naar excellentie geleid. Bij RegnarDesigner sturen integriteit, creativiteit en excellentie ons werk. Ethische materialen, transparante vakmanschap en een onophoudelijke zoektocht naar innovatie — dat is onze belofte."
+    "aboutMaxime": "Ontketen je vrijheid met onze juwelen! Voordat ik creëerde, beheerste ik persoonlijke ontwikkeling. Geïnspireerd door Sai Maa leerde ik mezelf te onthullen. Kunst evolueert door zelfkennis. Dankzij mijn studies in Schone Kunsten en mijn bezoeken aan musea creëer ik unieke stukken. De juwelenkunst heeft mijn ziel doen ontwaken en mijn creativiteit bevrijd. Elk stuk draagt deze vurige passie. Mijn mentor, Bernard Biernaux, heeft mijn talent gescherpt en mij naar excellentie geleid. Bij RegnarDesigner sturen integriteit, creativiteit en excellentie ons werk. Ethische materialen, transparante vakmanschap en een onophoudelijke zoektocht naar innovatie — dat is onze belofte.",
+    "contact": "Neem contact met ons op via e-mail of telefoon!",
+    "orContact": "Of klik op de knoppen om ons te vinden op sociale media:"
 }

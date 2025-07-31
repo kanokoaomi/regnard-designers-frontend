@@ -1,4 +1,10 @@
 {
+    "links": {
+        "home": "Accueil",
+        "creations": "créations",
+        "about": "À propos de nous",
+        "contacts": "Contacts"
+    },
     "subtitle": "Création de bijoux",
     "button": "passer une commande",
     "section2": "Découvrez nos",
@@ -10,5 +16,7 @@
         "aboutStephan2": "J'ai développé une passion pour fusionner l'art, l'or et les pierres précieuses dans des bijoux. Inspiré par les grands maîtres, je traduis les bijoux dans mon propre médium : l'or. Mes voyages à travers l'Asie et mon lien profond avec le Brésil ont influencé mon travail. Les couleurs vives et la culture de ce grand pays d'Amérique latine stimulent ma créativité. Je m'efforce d'être un bâtisseur de ponts entre différentes cultures et époques, où l'artisanat traditionnel et le design moderne se complètent.",
         "aboutStephan3": "Le processus de création de bijoux commence par des esquisses et des designs, et se termine avec le bijou fini. Dans mon atelier, je dessine et forge avec une grande précision, faisant de mes créations des expressions de beauté et de technique contemporaine.”"
     },
-    "aboutMaxime": "Déchaînez votre liberté avec nos bijoux ! Avant de créer, j’ai dompté le développement personnel. Inspiré par Sai Maa, j’ai appris à me révéler. L'art se révolutionne en se connaissant soi-même. Grâce à mes études en Beaux-Arts et aux musées, je crée des pièces uniques. La bijouterie-joaillerie a éveillé mon âme et libéré ma créativité. Chaque pièce porte cette passion ardente. Mon mentor, Bernard Biernaux, a forgé mon talent et m’a mené à l’excellence. Chez RegnarDesigner, l’intégrité, la créativité et l’excellence guident notre travail. Matériaux éthiques, fabrication transparente, quête incessante d’innovation : c’est notre engagement."
+    "aboutMaxime": "Déchaînez votre liberté avec nos bijoux ! Avant de créer, j’ai dompté le développement personnel. Inspiré par Sai Maa, j’ai appris à me révéler. L'art se révolutionne en se connaissant soi-même. Grâce à mes études en Beaux-Arts et aux musées, je crée des pièces uniques. La bijouterie-joaillerie a éveillé mon âme et libéré ma créativité. Chaque pièce porte cette passion ardente. Mon mentor, Bernard Biernaux, a forgé mon talent et m’a mené à l’excellence. Chez RegnarDesigner, l’intégrité, la créativité et l’excellence guident notre travail. Matériaux éthiques, fabrication transparente, quête incessante d’innovation : c’est notre engagement.",
+    "contact": "Contactez-nous par e-mail ou par téléphone !",
+    "orContact": "Ou cliquez sur les boutons pour nous retrouver sur les réseaux sociaux :"
 }

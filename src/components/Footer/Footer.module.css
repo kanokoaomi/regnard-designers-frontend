@@ -65,7 +65,7 @@
 .socialIcon {
     width: 32px;
     height: 32px;
-    /* transition: stroke 0.10s ease-in-out; */
+    /* transition: box-shadow 0.10s ease-in-out; */
 }
 
 .a {
@@ -108,6 +108,6 @@
 }
 
 /* .socialIcon:hover {
-    stroke: rgba(239, 202, 1, 0.68);
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.25);
 } */
 }

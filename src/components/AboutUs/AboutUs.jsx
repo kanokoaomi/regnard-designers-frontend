@@ -14,23 +14,6 @@ const AboutUs = () => {
         <div id="about">
             <div className={styles.title}><h2 className="title">{t("section3")} <span className="yellowSpan">{t("section3span")}</span></h2></div>
             <div className={styles.container}>
-                {/* <div className={styles.infoContainer}>
-                    {/* <img src="" alt="" /> */}
-                {/* <div className={styles.avatar}></div> */}
-                {/* <div> */}
-                {/* <h3 className={styles.name}>Stephan</h3>
-                    <ReadMoreBtn
-                        text={`"From the moment I saw gold flowing in the crucible, I felt a profound fascination for the precious metal. This led to my lifelong passion for goldsmithing. My story began at the 'Institut d'Art et Technique de Bruxelles,' where I learned the art of goldsmithing. To deeply understand the knowledge and properties of each gemstone, I further studied geology and gemology at KUL Leuven. My drive was to unveil their hidden beauty, and this fascination inspired my creations.
-
-                            I developed a passion for combining art, gold, and gemstones into jewelry. Inspired by great masters, I translate jewelry into my own medium: gold. My travels through Asia and my deep connection with Brazil have influenced my work. The vibrant colors and culture of this large Latin American country inspire my creativity. I aim to be a bridge builder between different cultures and eras, where traditional craftsmanship and modern design complement each other.
-
-                            The process of jewelry creation starts with sketches and designs and culminates in the finished jewel. In my workshop, I draw and forge with great precision, making my creations expressions of beauty and contemporary technique."`}
-                    /> */}
-                {/* <p className={styles.text}></p>
-                    <p className={styles.text}></p> */}
-                {/* <p className={styles.text}><b>Stephan Armand</b></p> */}
-                {/* </div> */}
-
                 <div className={styles.infoContainer}>
                     <div className={styles.avatar}>
                         <img src={StephanPhoto} alt="photo of Stephan" />

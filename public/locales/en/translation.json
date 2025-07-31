@@ -1,4 +1,10 @@
 {
+    "links": {
+        "home": "Home",
+        "creations": "creations",
+        "about": "about us",
+        "contacts": "Contacts"
+    },
     "subtitle": "Jewellery creation",
     "button": "make an order",
     "section2": "Discover our",
@@ -10,5 +16,7 @@
         "aboutStephan2": "I developed a passion for combining art, gold, and gemstones into jewelry. Inspired by great masters, I translate jewelry into my own medium: gold. My travels through Asia and my deep connection with Brazil have influenced my work. The vibrant colors and culture of this large Latin American country inspire my creativity. I aim to be a bridge builder between different cultures and eras, where traditional craftsmanship and modern design complement each other.",
         "aboutStephan3": "The process of jewelry creation starts with sketches and designs and culminates in the finished jewel. In my workshop, I draw and forge with great precision, making my creations expressions of beauty and contemporary technique.”"
     },
-    "aboutMaxime": "“Unleash your freedom with our jewelry! Before creating, I mastered personal development. Inspired by Sai Maa, I learned to reveal myself. Art evolves by knowing oneself. Thanks to my studies in Fine Arts and my visits to museums, I create unique pieces. Jewelry-making awakened my soul and freed my creativity. Each piece carries this passionate fire. My mentor, Bernard Biernaux, shaped my talent and led me to excellence. At RegnarDesigner, integrity, creativity, and excellence guide our work. Ethical materials, transparent craftsmanship, and a relentless pursuit of innovation — that is our commitment.”"
+    "aboutMaxime": "“Unleash your freedom with our jewelry! Before creating, I mastered personal development. Inspired by Sai Maa, I learned to reveal myself. Art evolves by knowing oneself. Thanks to my studies in Fine Arts and my visits to museums, I create unique pieces. Jewelry-making awakened my soul and freed my creativity. Each piece carries this passionate fire. My mentor, Bernard Biernaux, shaped my talent and led me to excellence. At RegnarDesigner, integrity, creativity, and excellence guide our work. Ethical materials, transparent craftsmanship, and a relentless pursuit of innovation — that is our commitment.”",
+    "contact": "Contact us via e-mail or a call!",
+    "orContact": "Or click on the buttons to find us in social media:"
 }

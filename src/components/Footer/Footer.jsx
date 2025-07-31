@@ -6,13 +6,17 @@ import { FaSquareInstagram } from "react-icons/fa6";
 import { FaFacebookSquare } from "react-icons/fa";
 import styles from "./Footer.module.css"
 import Line from '../Line/Line';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+
+    const {t} = useTranslation();
+
     return (
         <div id='contacts' className={styles.background}>
             <div className={styles.question}>
                 <ReactSVG src={regnardDesigners} desc='Regnard Designers logo' wrapper="div" className={styles.icon} />
-                <p className={styles.q}>Contact us via e-mail or a call!</p>
+                <p className={styles.q}>{t("contact")}</p>
             </div>
             <address className={styles.address}>
                 <a className={styles.link} target="_blank" href="mailto:bijouterieregnard@outlook.be">bijouterieregnard@outlook.be</a><br />
@@ -20,7 +24,7 @@ const Footer = () => {
             </address>
             <Line />
             <div className={styles.social}>
-                <p className={styles.qSecond}>Or click on the buttons to find us in social media:</p>
+                <p className={styles.qSecond}>{t("orContact")}</p>
                 <div className={styles.socialIconsWrapper}>
                     <a className={styles.a} target="_blank" href="https://www.instagram.com/regnardesigner/">
                         {/* <ReactSVG src={instagram} desc='Instagram icon' wrapper="div" className={styles.socialIcon} /> */}
