@@ -10,6 +10,7 @@ import burger from "../../assets/burgerMenu.svg"
 import Navigation from "../Navigation/Navigation";
 import ModalWindow from "../ModalWindow/ModalWindow.jsx";
 import NavLinks from "../NavLinks/NavLinks.jsx";
+import LanguageSelector from '../LanguageSelector/LanguageSelector.jsx';
 
 
 const Header = ({ children }) => {
@@ -23,6 +24,7 @@ const Header = ({ children }) => {
                 <ReactSVG src={regnardDesigners} desc='Regnard Designers logo' wrapper="div" className={styles.icon} />
                 <div className={styles.desktopNav}>
                     <Navigation />
+                    <LanguageSelector />
                     {!isLoggedIn && <NavLinks />}
                 </div>
 
@@ -32,13 +34,6 @@ const Header = ({ children }) => {
                 {isOpen && (
                     <ModalWindow onClose={() => setIsOpen(false)} setIsOpen={setIsOpen} />
                 )}
-
-
-                {/* <div className={styles.linksContainer}>
-                    <NavLink className={styles.link} to="/register">Register</NavLink>
-                    <p>|</p>
-                    <NavLink className={styles.link} to="/login"> Login</NavLink>
-                </div> */}
 
             </div>
             {children}

@@ -12,8 +12,11 @@ import SlidePrevButton from "../Buttons/SlidePrevButton";
 import SlideNextButton from "../Buttons/SlideNextButton";
 import { useEffect, useState } from "react";
 import Loader from "../Loader/Loader";
+import { useTranslation } from "react-i18next";
 
 const CreationsList = () => {
+
+    const {t} = useTranslation();
 
     // to change ammount of rows in swiper by the screen size
     const [gridRows, setGridRows] = useState(2);
@@ -41,7 +44,7 @@ const CreationsList = () => {
 
     return (
         <div id="creations">
-            <h2 className="title">Discover our <span className="yellowSpan">creations</span></h2>
+            <h2 className="title">{t("section2")} <span className="yellowSpan">{t("section2span")}</span></h2>
             <div className={styles.swiperContainer}>
                 <Swiper className={styles.swiper}
                     modules={[Grid, Pagination, Navigation]}
