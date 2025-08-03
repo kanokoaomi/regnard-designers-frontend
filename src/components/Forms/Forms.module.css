@@ -5,113 +5,118 @@
 } */
 
 .title {
-    font-family: "Cormorant Garamond", sans-serif;
-    font-weight: 600;
-    font-size: 32px;
-    text-align: center;
-    margin-top: 64px;
-    margin-bottom: 32px;
+  font-family: "Cormorant Garamond", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  text-align: center;
+  margin-top: 64px;
+  margin-bottom: 32px;
 }
 
 .form {
-    box-shadow: 0 4px 19px 2px rgba(0, 0, 0, 0.25);
-    border: 1px solid #efca01;
-    border-radius: 10px;
-    padding: 22px 22px 36px 22px;
+  box-shadow: 0 4px 19px 2px rgba(0, 0, 0, 0.25);
+  border: 1px solid #efca01;
+  border-radius: 10px;
+  padding: 22px 22px 36px 22px;
+  background-color: white;
 }
 
 .label {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 16px;   
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .inputContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
 }
 
 .input {
-    border: 1px solid #efca01;
-    border-radius: 10px;
-    padding: 8px 12px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 12px;
+  border: 1px solid #efca01;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
 }
 
-.text, .textTwo {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    text-align: center;
-    max-width: 220px;
-    margin-top: 32px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 100%;
+.text,
+.textTwo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  max-width: 220px;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 100%;
 }
 
 .textTwo {
-    font-size: 12px;
-    margin-top: 16px;
+  font-size: 12px;
+  margin-top: 16px;
 }
 
 .error {
-    font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-    color: red;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: red;
 }
 
 .link {
-    font-weight: 600;
-    text-decoration: underline;
-    transition: color 0.20s ease-in-out;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.2s ease-in-out;
 }
 
-.link:hover, .link:active {
-    color: #efca01;
+.link:hover,
+.link:active {
+  color: #efca01;
 }
 
 .noButton {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    font-family: "Montserrat", sans-serif;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* ========== TABLET =========== */
 
 @media (min-width: 768px) {
-    .title {
-        text-align: start;
-        margin-left: 64px;
-    }
+  /* .title {
+    text-align: start;
+    margin-left: 64px;
+  } */
 
-    .form {
-        padding: 22px 28px 36px 28px;
-        width: 350px;
-        margin-left: 64px;
-    }
+  .form {
+    padding: 22px 28px 36px 28px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .text, .textTwo {
-        text-align: start;
-        margin-left: 64px;
-        max-width: fit-content;
-    }
+  .text,
+  .textTwo {
+    /* text-align: start; */
+    /* margin-left: 64px; */
+    max-width: fit-content;
+  }
 
-    .textTwo {
-        margin-top: 12px;
-    }
+  .textTwo {
+    margin-top: 12px;
+  }
 }
 
 /* ========= DESKTOP ========== */
 
 @media (min-width: 1158px) {
-    .rings {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
+  .form {
+    padding: 22px 28px 36px 28px;
+    width: 450px;
+    /* margin-left: 64px; */
+  }
 }

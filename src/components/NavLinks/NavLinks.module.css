@@ -22,12 +22,20 @@
 .linksContainer {
     margin-top: 0;
 }
+
+.link {
+    font-size: 16px;
+}
 }
 
 
 /* ========== DESKTOP =========== */
 
 @media (min-width: 1158px) {
+
+.link {
+    font-size: 20px;
+}
 
 .link:hover {
     color: #efca01;

@@ -22,14 +22,32 @@ export const getAllPictures = createAsyncThunk(
   }
 );
 
-// export const addJewelleryPicture = createAsyncThunk(
-//   "jewellery/addPicture",
-//   async (formData, thunkAPI) => {
-//     try {
-//       const response = await api.post("/jewellery/picture", formData);
-//       return response.data;
-//     } catch (error) {
-//       return thunkAPI.rejectWithValue(error.message);
-//     }
-//   }
-// );
+export const addJewelleryPicture = createAsyncThunk(
+  "jewellery/addPicture",
+  async (formData, thunkAPI) => {
+    try {
+      // for (let pair of formData.entries()) {
+      //   console.log(pair[0] + ':', pair[1]);
+      // }
+      const response = await api.post("/jewellery/picture", formData);
+      console.log(response)
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const deletePicture = createAsyncThunk(
+  'jewellery/deletePicture',
+  async (pictureId, thunkAPI) => {
+    // console.log(pictureId);
+    try {
+      await api.delete(`/picture/${pictureId}`);
+      await thunkAPI.dispatch(getAllPictures());
+      return pictureId;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);

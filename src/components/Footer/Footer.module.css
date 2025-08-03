@@ -22,7 +22,8 @@
 
 .q {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 12px;
+    max-width: 263px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -72,21 +73,35 @@
     line-height: 0%;
 }
 
+.lngSelect {
+    display: flex;
+    gap: 12px;
+    margin-top: 64px;
+}
+
+.lngText {
+    font-family: "Cormorant Garamond", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    font-variant: all-small-caps;
+}
+
 /* ========= DESKTOP ========== */
 
 @media (min-width: 768px) {
 
 .background {
-    padding: 64px 0 148px 0;
+    padding: 64px 0 26px 0;
 }
 
 .q {
     font-size: 20px;
+    max-width: none;
 }
 
 .qSecond {
     font-size: 20px;
-    max-width: fit-content;
+    max-width: 542px;
     margin-bottom: 0px;
 }
 
@@ -101,8 +116,8 @@
 }
 
 .social {
-    flex-direction: row;
-    justify-content: center;
+    /* flex-direction: row;
+    justify-content: center; */
     margin-top: 40px;
     gap: 8px;
 }

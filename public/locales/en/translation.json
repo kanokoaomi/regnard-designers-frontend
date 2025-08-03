@@ -18,5 +18,11 @@
     },
     "aboutMaxime": "“Unleash your freedom with our jewelry! Before creating, I mastered personal development. Inspired by Sai Maa, I learned to reveal myself. Art evolves by knowing oneself. Thanks to my studies in Fine Arts and my visits to museums, I create unique pieces. Jewelry-making awakened my soul and freed my creativity. Each piece carries this passionate fire. My mentor, Bernard Biernaux, shaped my talent and led me to excellence. At RegnarDesigner, integrity, creativity, and excellence guide our work. Ethical materials, transparent craftsmanship, and a relentless pursuit of innovation — that is our commitment.”",
     "contact": "Contact us via e-mail or a call!",
-    "orContact": "Or click on the buttons to find us in social media:"
+    "orContact": "Or click on the buttons to find us in social media:",
+    "addPicture": {
+        "title": "Add a new picture",
+        "name": "Title",
+        "desc": "Description",
+        "btn": "Add the picture"
+    }
 }

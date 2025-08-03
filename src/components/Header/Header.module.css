@@ -1,93 +1,95 @@
 .header {
-    background-color: #ffffff;
-    box-sizing: border-box;
-    padding: 11px 24px;
-    border-bottom: 1px solid #efca01;
-    min-width: 100%;
-    /* height: 46px; */
-    box-shadow: 0 4px 19px 2px rgba(0, 0, 0, 0.25);
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding: 11px 24px;
+  border-bottom: 1px solid #efca01;
+  min-width: 100%;
+  /* height: 46px; */
+  box-shadow: 0 4px 19px 2px rgba(0, 0, 0, 0.25);
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    z-index: 999;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 999;
 }
 
 .icon {
-    width: 16px;
-    height: 24px;
+  width: 16px;
+  /* height: 24px; */
 }
 
+/* .icon > .div {
+  height: 0;
+} */
+
 .iconBurger {
-    width: 16px;
-    height: 24px;
-    /* position: fixed; 
+  width: 16px;
+  height: 24px;
+  /* position: fixed; 
     right: 25px;
     top: 16px; */
-    fill: black;
-    stroke: black;
+  fill: black;
+  stroke: black;
 }
 
 .modalOverlay {
-    background-color: rgba(0, 0, 0, 0.25);
-    position: fixed;
-    inset: 0;
-    z-index: 999;
-    /* display: flex;
+  background-color: rgba(0, 0, 0, 0.25);
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  /* display: flex;
     justify-content: center;
     align-items: center; */
 }
 
 .modal {
-    background-color: #fff;
-    padding: 16px;
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 264px;
-    height: 100vh;
+  background-color: #fff;
+  padding: 16px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 264px;
+  height: 100vh;
 }
 
 .button {
-    margin-left: auto;
-    background-color: transparent;
-    border: 0;
-
+  margin-left: auto;
+  background-color: transparent;
+  border: 0;
 }
 
 .desktopNav {
-    display: none;
+  display: none;
 }
-
 
 /* ========== TABLET =========== */
 
 @media (min-width: 768px) {
-.header {
+  .header {
     padding: 11px 16px;
-}
+  }
 
-.desktopNav {
+  .desktopNav {
     display: flex;
     align-items: center;
-    gap: 64px;
-}
+    gap: 48px;
+  }
 
-.button {
+  .button {
     display: none;
-}
+  }
 }
 
 /* ========== DESKTOP =========== */
 
 @media (min-width: 1158px) {
-.header {
+  .header {
     padding: 11px 96px;
-}
+  }
 
-/* .desktopNav {
+  /* .desktopNav {
     gap: 64px;
 } */
 }

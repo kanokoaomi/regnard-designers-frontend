@@ -3,110 +3,135 @@ import styles from "./CreationsList.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Grid, Navigation } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/grid"
+import "swiper/css/grid";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { useSelector } from "react-redux";
-import { isLoading, selectPictures } from "../../redux/jewellery/jewellerySelectors";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  isLoading,
+  selectPictures,
+} from "../../redux/jewellery/jewellerySelectors";
 import SlidePrevButton from "../Buttons/SlidePrevButton";
 import SlideNextButton from "../Buttons/SlideNextButton";
 import { useEffect, useState } from "react";
 import Loader from "../Loader/Loader";
 import { useTranslation } from "react-i18next";
+import { deletePicture } from "../../redux/jewellery/jewelleryOperations";
+import { SuccessToast } from "../../utils/successToast";
+import { ErrorToast } from "../../utils/errorToast";
 
 const CreationsList = () => {
+  const { t } = useTranslation();
+  const dispatch = useDispatch();
 
-    const {t} = useTranslation();
+  // to change ammount of rows in swiper by the screen size
+  const [gridRows, setGridRows] = useState(2);
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 767px)");
+    const handleResize = () => {
+      setGridRows(mediaQuery.matches ? 1 : 2);
+    };
+    // first run
+    handleResize();
+    // listening changes
+    mediaQuery.addEventListener("change", handleResize);
+    return () => {
+      mediaQuery.removeEventListener("change", handleResize);
+    };
+  }, []);
 
-    // to change ammount of rows in swiper by the screen size
-    const [gridRows, setGridRows] = useState(2);
-    useEffect(() => {
-        const mediaQuery = window.matchMedia('(max-width: 767px)');
-        const handleResize = () => {
-            setGridRows(mediaQuery.matches ? 1 : 2);
-        };
-        // first run
-        handleResize();
-        // listening changes
-        mediaQuery.addEventListener('change', handleResize);
-        return () => {
-            mediaQuery.removeEventListener('change', handleResize);
-        };
-    }, []);
+  const pictures = useSelector(selectPictures);
+  const Loading = useSelector(isLoading);
 
-    const pictures = useSelector(selectPictures);
-    const Loading = useSelector(isLoading);
+  if (Loading) {
+    // return <Loader />
+    return <p>Loading...</p>;
+  }
 
-    if (Loading) {
-        // return <Loader />
-        return <p>Loading...</p>;
+  const onDeleteButtonClick = (id) => {
+    try {
+      dispatch(deletePicture(id));
+      SuccessToast("Picture deleted successfully!");
+    } catch (error) {
+      ErrorToast(
+        error.message || "Failed to delete picture. Please try again."
+      );
     }
+  };
 
-    return (
-        <div id="creations">
-            <h2 className="title">{t("section2")} <span className="yellowSpan">{t("section2span")}</span></h2>
-            <div className={styles.swiperContainer}>
-                <Swiper className={styles.swiper}
-                    modules={[Grid, Pagination, Navigation]}
-                    direction="horizontal"
-                    centeredSlides={true}
-                    // loop={true}
-                    // loopAddBlankSlides={true}
-                    rewind={true}
-                    centeredSlidesBounds={true}
-                    breakpoints={{
-                        // when window width is >= 320px
-                        320: {
-                            slidesPerView: 1,
-                            spaceBetween: 20
-                        },
-                        // when window width is >= 768px
-                        768: {
-                            slidesPerView: 3,
-                            spaceBetween: 30
-                        },
-                    }}
-                    slidesPerView={gridRows === 1 ? 1 : 3}
-                    grid={{
-                        rows: gridRows,
-                        fill: "row",
-                    }}
-                    spaceBetween={gridRows === 1 ? 20 : 24}
-                    pagination={{
-                        type: "progress",
-                    }}
-                    keyboard={{
-                        enabled: true,
-                        onlyInViewport: true,
-                    }}
-                    width={1020}
-                >
-
-                    {/* {Loading && <Loader />} */}
-                    {/* <div className="swiper-wrapper"> */}
-                    {pictures && pictures.length > 0 && (
-                        pictures.map((picture) => (
-                            <SwiperSlide key={picture._id} className={styles.swiperSlide}>
-                                <div className={styles.pictureContainer}>
-                                    <img className={styles.picture} src={picture.pictureUrl} alt={picture.name} />
-                                    <p className={styles.text}>{picture.name}</p>
-                                </div>
-                            </SwiperSlide>
-                        ))
-                    )}
-                    <SlidePrevButton />
-                    {/* <SlideNextButton /> */}
-                    {/* <div className="prev-arrow" onClick={handlePrev} />
+  return (
+    <div id="creations">
+      <h2 className="title">
+        {t("section2")} <span className="yellowSpan">{t("section2span")}</span>
+      </h2>
+      <div className={styles.swiperContainer}>
+        <Swiper
+          className={styles.swiper}
+          modules={[Grid, Pagination, Navigation]}
+          direction="horizontal"
+          centeredSlides={true}
+          // loop={true}
+          // loopAddBlankSlides={true}
+          rewind={true}
+          centeredSlidesBounds={true}
+          breakpoints={{
+            // when window width is >= 320px
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            // when window width is >= 768px
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          }}
+          slidesPerView={gridRows === 1 ? 1 : 3}
+          grid={{
+            rows: gridRows,
+            fill: "row",
+          }}
+          spaceBetween={gridRows === 1 ? 20 : 24}
+          pagination={{
+            type: "progress",
+          }}
+          keyboard={{
+            enabled: true,
+            onlyInViewport: true,
+          }}
+          width={1020}
+        >
+          {/* {Loading && <Loader />} */}
+          {/* <div className="swiper-wrapper"> */}
+          {pictures &&
+            pictures.length > 0 &&
+            pictures.map((picture) => (
+              <SwiperSlide key={picture._id} className={styles.swiperSlide}>
+                <div className={styles.pictureContainer}>
+                  <img
+                    className={styles.picture}
+                    src={picture.pictureUrl}
+                    alt={picture.name}
+                  />
+                  <p className={styles.text}>{picture.name}</p>
+                  {/* <button onClick={() => onDeleteButtonClick(picture._id)}>
+                    delete
+                  </button> */}
+                </div>
+              </SwiperSlide>
+            ))}
+          <SlidePrevButton />
+          {/* <SlideNextButton /> */}
+          {/* <div className="prev-arrow" onClick={handlePrev} />
                     <div className="next-arrow" onClick={handleNext} /> */}
-                </Swiper>
-            </div>
-
-        </div>
-    )
-}
+        </Swiper>
+      </div>
+    </div>
+  );
+};
 
 // : (
 //     <p>No pictures available</p>
 // )
 
-export default CreationsList
+export default CreationsList;

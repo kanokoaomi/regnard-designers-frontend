@@ -1,0 +1,53 @@
+/* ========== TABLET =========== */
+
+@media (min-width: 768px) {
+  /* .pictureContainer {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    background-image: url("../../images/tablet@1x.png");
+  } */
+
+  /* Retina tablet */
+  /* @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+    (min-width: 768px) and (min-resolution: 192dpi) {
+    .pictureContainer {
+      background-image: url("../../images/tablet@2x.png");
+    }
+  } */
+}
+
+/* ========= DESKTOP ========== */
+
+@media (min-width: 1158px) {
+  .form {
+    margin-top: 120px;
+  }
+
+  /* .pictureContainer {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    background-image: url("../../images/desktop@1x.png");
+  } */
+}
+
+/* Retina для desktop */
+/* @media (min-width: 1158px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 1158px) and (min-resolution: 192dpi) {
+  .pictureContainer {
+    background-image: url("../../images/desktop@2x.png");
+  }
+} */

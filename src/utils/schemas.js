@@ -19,3 +19,22 @@ export const LoginSchema = Yup.object().shape({
     .max(24, "*Too long")
     .required("*Required"),
 });
+
+export const AddPictureSchema = Yup.object().shape({
+  title: Yup.string()
+    .min(2, "*Too Short!")
+    .max(50, "*Too Long!")
+    .required("*Required"),
+  desc: Yup.string()
+    .min(10, "*Too Short!")
+    .max(250, "*Too Long!")
+    .required("*Required"),
+  pictureUrl: Yup.mixed()
+    .required("*Image is required")
+    .test(
+      "fileFormat",
+      "*Unsupported file format",
+      (value) =>
+        value && ["image/jpeg", "image/png", "image/jpg"].includes(value.type)
+    ),
+});

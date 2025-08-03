@@ -1,0 +1,16 @@
+.navlink > button {
+  margin-top: 0;
+  padding: 6px 28px;
+  box-shadow: none;
+  border: 1px solid #efca01;
+}
+
+.icon {
+  box-sizing: border-box;
+  display: block;
+  width: 5px;
+  height: 10px;
+  stroke: black;
+  color: black;
+  fill: black;
+}
