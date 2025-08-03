@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import {
   isLoading,
   selectPictures,
@@ -16,13 +16,13 @@ import SlideNextButton from "../Buttons/SlideNextButton";
 import { useEffect, useState } from "react";
 import Loader from "../Loader/Loader";
 import { useTranslation } from "react-i18next";
-import { deletePicture } from "../../redux/jewellery/jewelleryOperations";
+// import { deletePicture } from "../../redux/jewellery/jewelleryOperations";
 import { SuccessToast } from "../../utils/successToast";
 import { ErrorToast } from "../../utils/errorToast";
 
 const CreationsList = () => {
   const { t } = useTranslation();
-  const dispatch = useDispatch();
+  //   const dispatch = useDispatch();
 
   // to change ammount of rows in swiper by the screen size
   const [gridRows, setGridRows] = useState(2);
@@ -48,16 +48,16 @@ const CreationsList = () => {
     return <p>Loading...</p>;
   }
 
-  const onDeleteButtonClick = (id) => {
-    try {
-      dispatch(deletePicture(id));
-      SuccessToast("Picture deleted successfully!");
-    } catch (error) {
-      ErrorToast(
-        error.message || "Failed to delete picture. Please try again."
-      );
-    }
-  };
+  //   const onDeleteButtonClick = (id) => {
+  //     try {
+  //       dispatch(deletePicture(id));
+  //       SuccessToast("Picture deleted successfully!");
+  //     } catch (error) {
+  //       ErrorToast(
+  //         error.message || "Failed to delete picture. Please try again."
+  //       );
+  //     }
+  //   };
 
   return (
     <div id="creations">
