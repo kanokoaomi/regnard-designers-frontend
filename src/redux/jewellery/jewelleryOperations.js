@@ -42,8 +42,9 @@ export const deletePicture = createAsyncThunk(
   'jewellery/deletePicture',
   async (pictureId, thunkAPI) => {
     // console.log(pictureId);
+    console.log(api.defaults.headers.common.Authorization);
     try {
-      await api.delete(`/picture/${pictureId}`);
+      await api.delete(`jewellery/picture/${pictureId}`);
       await thunkAPI.dispatch(getAllPictures());
       return pictureId;
     } catch (error) {

@@ -6,16 +6,19 @@ import Footer from "../../components/Footer/Footer";
 import Section from "../../components/Section/Section";
 import Header from "../../components/Header/Header.jsx";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getAllPictures } from "../../redux/jewellery/jewelleryOperations";
 import AddPictureButton from "../../components/AddButton/AddPictureButton.jsx";
+import { selectIsUserAdmin } from "../../redux/auth/authSelections.js";
 
 const HomePage = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAllPictures());
   }, [dispatch]);
+
+  const isAdmin = useSelector(selectIsUserAdmin);
 
   return (
     <div>
@@ -32,7 +35,7 @@ const HomePage = () => {
         </Section>
       </Container>
       <Footer />
-      <AddPictureButton />
+      {isAdmin && <AddPictureButton />}
     </div>
   );
 };

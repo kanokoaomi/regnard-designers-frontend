@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   isLoading,
   selectPictures,
@@ -16,13 +16,14 @@ import SlideNextButton from "../Buttons/SlideNextButton";
 import { useEffect, useState } from "react";
 import Loader from "../Loader/Loader";
 import { useTranslation } from "react-i18next";
-// import { deletePicture } from "../../redux/jewellery/jewelleryOperations";
 import { SuccessToast } from "../../utils/successToast";
 import { ErrorToast } from "../../utils/errorToast";
+import { deletePicture } from "../../redux/jewellery/jewelleryOperations";
+import { selectIsUserAdmin } from "../../redux/auth/authSelections";
 
 const CreationsList = () => {
   const { t } = useTranslation();
-  //   const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   // to change ammount of rows in swiper by the screen size
   const [gridRows, setGridRows] = useState(2);
@@ -42,22 +43,21 @@ const CreationsList = () => {
 
   const pictures = useSelector(selectPictures);
   const Loading = useSelector(isLoading);
+  const isAdmin = useSelector(selectIsUserAdmin);
 
   if (Loading) {
     // return <Loader />
     return <p>Loading...</p>;
   }
 
-  //   const onDeleteButtonClick = (id) => {
-  //     try {
-  //       dispatch(deletePicture(id));
-  //       SuccessToast("Picture deleted successfully!");
-  //     } catch (error) {
-  //       ErrorToast(
-  //         error.message || "Failed to delete picture. Please try again."
-  //       );
-  //     }
-  //   };
+  const onDeleteButtonClick = async (id) => {
+    // console.log(picture);
+    try {
+      await dispatch(deletePicture(id)).unwrap();
+    } catch {
+      ErrorToast("Failed to delete picture. Please try again.");
+    }
+  };
 
   return (
     <div id="creations">
@@ -114,9 +114,14 @@ const CreationsList = () => {
                     alt={picture.name}
                   />
                   <p className={styles.text}>{picture.name}</p>
-                  {/* <button onClick={() => onDeleteButtonClick(picture._id)}>
-                    delete
-                  </button> */}
+                  {isAdmin && (
+                    <button
+                      className={styles.buttonDelete}
+                      onClick={() => onDeleteButtonClick(picture._id)}
+                    >
+                      delete
+                    </button>
+                  )}
                 </div>
               </SwiperSlide>
             ))}

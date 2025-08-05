@@ -1,13 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {
   loginUser,
+  logout,
   refreshUser,
   registerUser,
   setToken,
 } from "./authOperations";
 
 const initialState = {
-  userData: null,
+  userData: {
+    name: null,
+    email: null,
+    isAdmin: false,
+  },
+  // userData: null,
   isLoading: false,
   error: null,
 
@@ -32,7 +38,9 @@ const authSlice = createSlice({
         state.isLoggedIn = true;
         state.error = null;
         state.token = action.payload.data.accessToken;
-        state.userData = action.payload.data.user;
+        state.userData = {
+          ...action.payload.data.user, 
+        };
 
         if (action.payload.data.accessToken) {
           setToken(action.payload.data.accessToken);
@@ -54,7 +62,9 @@ const authSlice = createSlice({
         state.error = null;
         state.isLoggedIn = true;
         state.token = action.payload.data.accessToken;
-        state.user = action.payload.data.user;
+        state.userData = {
+          ...action.payload.data.user,
+        };
 
         if (action.payload.data.accessToken) {
           setToken(action.payload.data.accessToken);
@@ -67,14 +77,14 @@ const authSlice = createSlice({
       })
       .addCase(refreshUser.pending, (state) => {
         state.isRefreshing = true;
-        state.loading = true;
+        state.isLoading = true;
         state.error = null;
       })
       .addCase(refreshUser.fulfilled, (state, action) => {
         // console.log('ref.ful', action.payload);
 
         state.isRefreshing = false;
-        state.loading = false;
+        state.isLoading = false;
         state.isLoggedIn = true;
         state.user = action.payload;
       })
@@ -82,11 +92,24 @@ const authSlice = createSlice({
         // console.log(action.payload);
 
         state.isRefreshing = false;
-        state.loading = false;
+        state.isLoading = false;
         state.error = action.payload;
         state.token = null;
         state.isLoggedIn = false;
-      });
+      })
+    .addCase(logout.pending, state => {
+        state.isLoading = true;
+        state.error = null;
+      })
+      .addCase(logout.fulfilled, () => {
+        localStorage.removeItem('persist:authKey');
+
+        return initialState;
+      })
+      .addCase(logout.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      })
   },
 });
 

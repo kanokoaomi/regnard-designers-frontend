@@ -11,6 +11,7 @@ import Navigation from "../Navigation/Navigation";
 import ModalWindow from "../ModalWindow/ModalWindow.jsx";
 import NavLinks from "../NavLinks/NavLinks.jsx";
 import LanguageSelector from "../LanguageSelector/LanguageSelector.jsx";
+import LogOut from "../LogOut/LogOut.jsx";
 
 const Header = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,6 +30,7 @@ const Header = ({ children }) => {
           <Navigation />
           <LanguageSelector />
           {!isLoggedIn && <NavLinks />}
+          {isLoggedIn && <LogOut />}
         </div>
 
         <button className={styles.button} onClick={() => setIsOpen(true)}>

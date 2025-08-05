@@ -56,6 +56,14 @@
   color: #efca01;
 }
 
+.link {
+  font-family: "Cormorant Garamond", sans-serif;
+  font-variant: all-small-caps;
+  font-weight: 600;
+  font-size: 20px;
+  transition: color 0.15s ease-in;
+}
+
 .button {
   background-color: #ffffff;
   border: 2px solid #efca01;
@@ -113,7 +121,13 @@
   .swiper {
     margin-top: 32px;
   }
+
+  .link {
+    font-size: 16px;
+  }
 }
+
+/* ========== DESKTOP =========== */
 
 @media (min-width: 1158px) {
   .title {
@@ -134,5 +148,13 @@
 
   .swiper-grid > .swiper-wrapper {
     margin: 0;
+  }
+
+  .link {
+    font-size: 20px;
+  }
+
+  .link:hover {
+    color: #efca01;
   }
 }

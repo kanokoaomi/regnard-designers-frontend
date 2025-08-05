@@ -1,43 +1,21 @@
 .linksContainer {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    justify-content: center;
-    margin-top: 48px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 48px;
 }
-
-.link {
-    font-family: "Cormorant Garamond", sans-serif;
-    font-variant: all-small-caps;
-    font-weight: 600;
-    font-size: 20px;
-    transition: color 0.15s ease-in;
-}
-
 
 /* ========== TABLET =========== */
 
 @media (min-width: 768px) {
-
-.linksContainer {
+  .linksContainer {
     margin-top: 0;
+  }
 }
-
-.link {
-    font-size: 16px;
-}
-}
-
 
 /* ========== DESKTOP =========== */
 
-@media (min-width: 1158px) {
+/* @media (min-width: 1158px) {
 
-.link {
-    font-size: 20px;
-}
-
-.link:hover {
-    color: #efca01;
-}
-}
+} */

@@ -67,7 +67,7 @@ const Forms = ({
               </label>
               <Field
                 autoComplete={false.toString()}
-                placeholder={"Stephan Armand"}
+                placeholder={"John Doe"}
                 className={styles.input}
                 type="text"
                 name="name"

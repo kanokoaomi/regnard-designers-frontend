@@ -1,47 +1,70 @@
 .swiper {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .wrapper {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .swiper .swiperSlide {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    row-gap: 24px;
-    /* column-gap: 60px; */
-    /* height: calc((100% - 30px) / 2) !important; */
-    text-align: center;
-    /* max-width: 300px; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 24px;
+  /* column-gap: 60px; */
+  /* height: calc((100% - 30px) / 2) !important; */
+  text-align: center;
+  /* max-width: 300px; */
 }
 
 .pictureContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
 }
 
 .text {
-    font-family: "Montserrat", sans-serif;
-    max-width: 246px;
-    /* margin-top: 12px; */
+  font-family: "Montserrat", sans-serif;
+  max-width: 246px;
+  /* margin-top: 12px; */
+}
+
+.buttonDelete {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  background-color: #ffffff;
+  border: 2px solid #efca01;
+  border-radius: 10px;
+  width: 64px;
+  height: 24px;
+  font-family: "Cormorant Garamond", sans-serif;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
+}
+
+.buttonDelete:hover {
+  width: 72px;
+  height: 28px;
 }
 
 .picture {
-    max-width: inherit;
-    height: 272px;
-    background-color: gold;
-    display: block;
+  max-width: inherit;
+  height: 272px;
+  background-color: gold;
+  display: block;
 }
 
 @media (min-width: 1158px) {
-.picture {
+  .picture {
     height: 300px;
-}
+  }
 }
