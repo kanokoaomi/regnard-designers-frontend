@@ -6,6 +6,7 @@ import { Toaster } from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { refreshUser } from "./redux/auth/authOperations";
 import Loader from "./components/Loader/Loader";
+import UpdatePicture from "./pages/UpdatePicturePage/UpdatePicturePage";
 
 const AddPicture = React.lazy(() =>
   import("./pages/AddPicture/AddPicturePage")
@@ -28,6 +29,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/add-picture" element={<AddPicture />} />
+          <Route path="/update-picture/:id" element={<UpdatePicture />} />
         </Routes>
       </Suspense>
     </div>

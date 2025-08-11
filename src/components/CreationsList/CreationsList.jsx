@@ -19,6 +19,7 @@ import { ErrorToast } from "../../utils/errorToast";
 import { deletePicture } from "../../redux/jewellery/jewelleryOperations";
 import { selectIsUserAdmin } from "../../redux/auth/authSelections";
 import SlideButtons from "../Buttons/SlideButtons";
+import { useNavigate } from "react-router-dom";
 
 const CreationsList = () => {
   const { t } = useTranslation();
@@ -56,6 +57,12 @@ const CreationsList = () => {
     } catch {
       ErrorToast("Failed to delete picture. Please try again.");
     }
+  };
+
+  const navigate = useNavigate();
+
+  const onUpdateButtonClick = (id) => {
+    navigate(`/update-picture/${id}`);
   };
 
   return (
@@ -121,6 +128,14 @@ const CreationsList = () => {
                       onClick={() => onDeleteButtonClick(picture._id)}
                     >
                       delete
+                    </button>
+                  )}
+                  {isAdmin && (
+                    <button
+                      onClick={() => onUpdateButtonClick(picture._id)}
+                      className={styles.buttonUpdate}
+                    >
+                      edit
                     </button>
                   )}
                 </div>

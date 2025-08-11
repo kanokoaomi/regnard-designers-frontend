@@ -38,3 +38,19 @@ export const AddPictureSchema = Yup.object().shape({
         value && ["image/jpeg", "image/png", "image/jpg"].includes(value.type)
     ),
 });
+
+export const updatePictureSchema = Yup.object().shape({
+  title: Yup.string()
+    .min(2, "*Too Short!")
+    .max(50, "*Too Long!"),
+  desc: Yup.string()
+    .min(10, "*Too Short!")
+    .max(250, "*Too Long!"),
+  pictureUrl: Yup.mixed()
+    .test(
+      "fileFormat",
+      "*Unsupported file format",
+      (value) =>
+        value && ["image/jpeg", "image/png", "image/jpg"].includes(value.type)
+    ),
+});
