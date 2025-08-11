@@ -45,8 +45,8 @@ const CreationsList = () => {
   const isAdmin = useSelector(selectIsUserAdmin);
 
   if (Loading) {
-    // return <Loader />
-    return <p>Loading...</p>;
+    return <Loader />;
+    // return <p>Loading...</p>;
   }
 
   const onDeleteButtonClick = async (id) => {
