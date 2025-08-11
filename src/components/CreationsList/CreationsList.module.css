@@ -56,15 +56,31 @@
   height: 28px;
 }
 
+.imageWrapper {
+  width: 272px;
+  height: 272px;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .picture {
   max-width: inherit;
-  height: 272px;
-  background-color: gold;
+  /* background-color: gold; */
   display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (min-width: 1158px) {
-  .picture {
+  .imageWrapper {
+    width: 300px;
     height: 300px;
   }
+
+  /* .picture {
+    height: 300px;
+  } */
 }

@@ -44,10 +44,10 @@ const CreationsList = () => {
   const Loading = useSelector(isLoading);
   const isAdmin = useSelector(selectIsUserAdmin);
 
-  if (Loading) {
-    return <Loader />;
-    // return <p>Loading...</p>;
-  }
+  // if (Loading) {
+  //   return <Loader />;
+  //   // return <p>Loading...</p>;
+  // }
 
   const onDeleteButtonClick = async (id) => {
     // console.log(picture);
@@ -107,11 +107,13 @@ const CreationsList = () => {
             pictures.map((picture) => (
               <SwiperSlide key={picture._id} className={styles.swiperSlide}>
                 <div className={styles.pictureContainer}>
-                  <img
-                    className={styles.picture}
-                    src={picture.pictureUrl}
-                    alt={picture.name}
-                  />
+                  <div className={styles.imageWrapper}>
+                    <img
+                      className={styles.picture}
+                      src={picture.pictureUrl}
+                      alt={picture.name}
+                    />
+                  </div>
                   <p className={styles.text}>{picture.name}</p>
                   {isAdmin && (
                     <button
