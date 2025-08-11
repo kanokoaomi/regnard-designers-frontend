@@ -8,7 +8,7 @@ import {
 } from "../../redux/jewellery/jewelleryOperations";
 
 import styles from "../AddPicture/AddPicturePage.module.css";
-import UpdatePicture from "../../components/UpdatePicture/Updatepicture";
+import UpdatePicture from "../../components/UpdatePicture/UpdatePicture";
 import { SuccessToast } from "../../utils/successToast";
 import { ErrorToast } from "../../utils/errorToast";
 
