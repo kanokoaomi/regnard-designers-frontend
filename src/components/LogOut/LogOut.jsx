@@ -16,6 +16,7 @@ const LogOut = () => {
   return (
     <div>
       <button
+        aria-label="Log Out"
         style={{
           backgroundColor: "transparent",
           border: "none",

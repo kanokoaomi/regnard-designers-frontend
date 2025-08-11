@@ -119,7 +119,7 @@ const Forms = ({
             />
           </div>
 
-          <button className="button" type="submit">
+          <button aria-label="Submit form" className="button" type="submit">
             {button}
           </button>
         </Form>

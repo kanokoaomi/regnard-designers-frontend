@@ -11,8 +11,6 @@ import {
   isLoading,
   selectPictures,
 } from "../../redux/jewellery/jewellerySelectors";
-import SlidePrevButton from "../Buttons/SlidePrevButton";
-import SlideNextButton from "../Buttons/SlideNextButton";
 import { useEffect, useState } from "react";
 import Loader from "../Loader/Loader";
 import { useTranslation } from "react-i18next";
@@ -20,6 +18,7 @@ import { SuccessToast } from "../../utils/successToast";
 import { ErrorToast } from "../../utils/errorToast";
 import { deletePicture } from "../../redux/jewellery/jewelleryOperations";
 import { selectIsUserAdmin } from "../../redux/auth/authSelections";
+import SlideButtons from "../Buttons/SlideButtons";
 
 const CreationsList = () => {
   const { t } = useTranslation();
@@ -125,7 +124,7 @@ const CreationsList = () => {
                 </div>
               </SwiperSlide>
             ))}
-          <SlidePrevButton />
+          <SlideButtons />
           {/* <SlideNextButton /> */}
           {/* <div className="prev-arrow" onClick={handlePrev} />
                     <div className="next-arrow" onClick={handleNext} /> */}
