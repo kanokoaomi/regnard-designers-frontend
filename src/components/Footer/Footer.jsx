@@ -4,6 +4,7 @@ import regnardDesigners from "../../assets/regnard-designers.svg";
 // import facebook from "../../assets/facebook.svg"
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaFacebookSquare } from "react-icons/fa";
+import { MdLocationOn } from "react-icons/md";
 import styles from "./Footer.module.css";
 import Line from "../Line/Line";
 import { useTranslation } from "react-i18next";
@@ -36,6 +37,16 @@ const Footer = () => {
           + 32486414930
         </a>
       </address>
+
+      <Line />
+
+      <div className={styles.location}>
+        <MdLocationOn className={styles.locIcon} />
+        <a href="" className={styles.locSpan}>
+          Belgium
+        </a>
+      </div>
+
       <Line />
       <div className={styles.social}>
         <p className={styles.qSecond}>{t("orContact")}</p>
