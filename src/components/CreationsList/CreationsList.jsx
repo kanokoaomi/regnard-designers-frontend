@@ -118,10 +118,10 @@ const CreationsList = () => {
                     <img
                       className={styles.picture}
                       src={picture.pictureUrl}
-                      // alt={picture.title}
+                      alt={picture.title}
                     />
                   </div>
-                  <p className={styles.text}>{picture.title}</p>
+                  {/* <p className={styles.text}>{picture.title}</p> */}
                   {isAdmin && (
                     <button
                       className={styles.buttonDelete}
