@@ -39,7 +39,7 @@ export const addJewelleryPicture = createAsyncThunk(
   "jewellery/addPicture",
   async (formData, thunkAPI) => {
     try {
-      const response = await api.get("/jewellery/picture", formData);
+      const response = await api.post("/jewellery/picture", formData);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
