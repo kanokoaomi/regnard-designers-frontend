@@ -1,0 +1,61 @@
+.pictureContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+}
+
+.buttonDelete,
+.buttonUpdate {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  background-color: #ffffff;
+  border: 2px solid #efca01;
+  border-radius: 10px;
+  width: 64px;
+  height: 24px;
+  font-family: "Cormorant Garamond", sans-serif;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
+}
+
+.buttonUpdate {
+  top: 48px;
+}
+
+.buttonDelete:hover,
+.buttonUpdate:hover {
+  width: 72px;
+  height: 28px;
+}
+
+.imageWrapper {
+  width: 272px;
+  height: 272px;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.picture {
+  max-width: inherit;
+  /* background-color: gold; */
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 1158px) {
+  .imageWrapper {
+    width: 300px;
+    height: 300px;
+  }
+}

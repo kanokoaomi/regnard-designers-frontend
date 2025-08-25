@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  margin-left: 120px;
+  gap: 100px;
+  width: 100%;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  gap: 12px;
+  align-items: center;
+}
+
+.title {
+  font-family: "Cormorant Garamond", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  text-align: center;
+  line-height: 80%;
+}
+
+.desc {
+  font-family: "Montserrat", sans-serif;
+}

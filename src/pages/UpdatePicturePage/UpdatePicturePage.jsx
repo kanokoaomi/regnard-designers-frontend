@@ -1,7 +1,7 @@
 import { NavLink, useNavigate, useParams } from "react-router-dom";
 import Container from "../../components/Container/Container";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   getPictureById,
   updatePicture,
@@ -11,11 +11,14 @@ import styles from "../AddPicture/AddPicturePage.module.css";
 import UpdatePicture from "../../components/UpdatePicture/UpdatePicture";
 import { SuccessToast } from "../../utils/successToast";
 import { ErrorToast } from "../../utils/errorToast";
+import { isLoading } from "../../redux/jewellery/jewellerySelectors";
+import Loader from "../../components/Loader/Loader";
 
 const UpdatePicturePage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const loading = useSelector(isLoading);
 
   useEffect(() => {
     dispatch(getPictureById(id));
@@ -38,12 +41,19 @@ const UpdatePicturePage = () => {
     }
   };
 
+  const onReturnButton = () => {
+    navigate("/");
+  };
+
   return (
     <div>
+      {loading && <Loader />}
       <header className="header">
-        <NavLink className={styles.navlink} to={"/"}>
-          <button className="button">return</button>
-        </NavLink>
+        <div className={styles.navlink}>
+          <button onClick={() => onReturnButton()} className="button">
+            return
+          </button>
+        </div>
         {/* <LanguageSelector /> */}
       </header>
       <Container>

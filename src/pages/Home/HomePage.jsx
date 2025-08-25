@@ -7,10 +7,11 @@ import Section from "../../components/Section/Section";
 import Header from "../../components/Header/Header.jsx";
 
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { getAllPictures } from "../../redux/jewellery/jewelleryOperations";
 import AddPictureButton from "../../components/AddButton/AddPictureButton.jsx";
 import { selectIsUserAdmin } from "../../redux/auth/authSelections.js";
+import ModalPicture from "../../components/ModalPicture/ModalPicture.jsx";
 
 const HomePage = () => {
   const dispatch = useDispatch();
@@ -18,7 +19,20 @@ const HomePage = () => {
     dispatch(getAllPictures());
   }, [dispatch]);
 
+  const [selectedPicture, setSelectedPicture] = useState(null);
+  const [modalIsOpen, setIsOpen] = useState(false);
+
   const isAdmin = useSelector(selectIsUserAdmin);
+
+  const handleOpenModal = (picture) => {
+    setIsOpen(true);
+    setSelectedPicture(picture);
+  };
+
+  const handleCloseModal = () => {
+    setIsOpen(false);
+    setSelectedPicture(null);
+  };
 
   return (
     <div>
@@ -28,7 +42,7 @@ const HomePage = () => {
           <MainScreen />
         </Section>
         <Section>
-          <CreationsList />
+          <CreationsList onPictureClick={handleOpenModal} />
         </Section>
         <Section>
           <AboutUs />
@@ -36,6 +50,13 @@ const HomePage = () => {
       </Container>
       <Footer />
       {isAdmin && <AddPictureButton />}
+      {selectedPicture && (
+        <ModalPicture
+          isOpen={modalIsOpen}
+          picture={selectedPicture}
+          onClose={handleCloseModal}
+        />
+      )}
     </div>
   );
 };

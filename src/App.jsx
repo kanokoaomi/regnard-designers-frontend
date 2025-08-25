@@ -6,10 +6,12 @@ import { Toaster } from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { refreshUser } from "./redux/auth/authOperations";
 import Loader from "./components/Loader/Loader";
-import UpdatePicture from "./pages/UpdatePicturePage/UpdatePicturePage";
 
 const AddPicture = React.lazy(() =>
   import("./pages/AddPicture/AddPicturePage")
+);
+const UpdatePicture = React.lazy(() =>
+  import("./pages/UpdatePicturePage/UpdatePicturePage")
 );
 const Register = React.lazy(() => import("./pages/Register/Register"));
 const Login = React.lazy(() => import("./pages/Login/Login"));

@@ -20,8 +20,10 @@ import { deletePicture } from "../../redux/jewellery/jewelleryOperations";
 import { selectIsUserAdmin } from "../../redux/auth/authSelections";
 import SlideButtons from "../Buttons/SlideButtons";
 import { useNavigate } from "react-router-dom";
+import JewelleryPicture from "../JewelleryPicture/JewelleryPicture";
+import ModalPicture from "../ModalPicture/ModalPicture";
 
-const CreationsList = () => {
+const CreationsList = ({ onPictureClick }) => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
 
@@ -113,46 +115,20 @@ const CreationsList = () => {
             pictures.length > 0 &&
             pictures.map((picture) => (
               <SwiperSlide key={picture._id} className={styles.swiperSlide}>
-                <div className={styles.pictureContainer}>
-                  <div className={styles.imageWrapper}>
-                    <img
-                      className={styles.picture}
-                      src={picture.pictureUrl}
-                      alt={picture.title}
-                    />
-                  </div>
-                  {/* <p className={styles.text}>{picture.title}</p> */}
-                  {isAdmin && (
-                    <button
-                      className={styles.buttonDelete}
-                      onClick={() => onDeleteButtonClick(picture._id)}
-                    >
-                      delete
-                    </button>
-                  )}
-                  {isAdmin && (
-                    <button
-                      onClick={() => onUpdateButtonClick(picture._id)}
-                      className={styles.buttonUpdate}
-                    >
-                      edit
-                    </button>
-                  )}
-                </div>
+                <JewelleryPicture
+                  onClick={() => onPictureClick(picture)}
+                  picture={picture}
+                  isAdmin={isAdmin}
+                  onDeleteButtonClick={onDeleteButtonClick}
+                  onUpdateButtonClick={onUpdateButtonClick}
+                />
               </SwiperSlide>
             ))}
           <SlideButtons />
-          {/* <SlideNextButton /> */}
-          {/* <div className="prev-arrow" onClick={handlePrev} />
-                    <div className="next-arrow" onClick={handleNext} /> */}
         </Swiper>
       </div>
     </div>
   );
 };
-
-// : (
-//     <p>No pictures available</p>
-// )
 
 export default CreationsList;
