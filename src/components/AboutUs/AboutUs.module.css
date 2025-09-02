@@ -1,38 +1,40 @@
 .title {
-    text-align: end;
-    margin-bottom: 22px;
+  text-align: end;
+  margin-bottom: 22px;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .infoContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
 .name {
-    order: 0;
-    font-family: "Cormorant Garamond", sans-serif;
-    font-weight: 600;
-    font-size: 24px;
-    text-align: center;
+  order: 0;
+  font-family: "Cormorant Garamond", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
 }
 
-.nameForAdaptive, .nameForAdaptiveTwo {
-    display: none;
+.nameForAdaptive,
+.nameForAdaptiveTwo {
+  display: none;
 }
 
-.avatar, .avatarTwo {
-    order: 1;
-    width: 242px;
-    /* height: 242px; */
-    background-color: burlywood;
+.avatar,
+.avatarTwo {
+  order: 1;
+  width: 242px;
+  /* height: 242px; */
+  background-color: burlywood;
 }
 
 /* .avatarTwo {
@@ -46,121 +48,122 @@
     margin-bottom: 8px;
 } */
 
-.textWrapper, .textWrapperTwo {
-    order: 2;
+.textWrapper,
+.textWrapperTwo {
+  order: 2;
 }
 
-.text, .textTwo {
-    order: 2;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    text-align: center;
-    margin-bottom: 8px;
+.text,
+.textTwo {
+  order: 2;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 8px;
 }
 
 /* ========== TABLET =========== */
 
 @media (min-width: 768px) {
-    .title {
-        margin-bottom: 32px;
-    }
+  .title {
+    margin-bottom: 32px;
+  }
 
-    .infoContainer {
-        display: block;
-    }
+  .infoContainer {
+    display: block;
+  }
 
-    .avatar {
-        min-width: 350px;
-        height: 350px;
-        float: left;
-        margin-right: 24px;
-        margin-bottom: 24px;
-    }
+  .avatar {
+    min-width: 350px;
+    height: 350px;
+    float: left;
+    margin-right: 24px;
+    margin-bottom: 24px;
+  }
 
-    .avatarTwo {
-        min-width: 350px;
-        height: 350px;
-        float: right;
-        margin-left: 24px;
-        /* margin-bottom: 24px; */
-    }
+  .avatarTwo {
+    min-width: 350px;
+    height: 350px;
+    float: right;
+    margin-left: 24px;
+    margin-bottom: 38px;
+  }
 
-    .name {
-        display: none;
-    }
+  .name {
+    display: none;
+  }
 
-    .nameForAdaptive {
-        display: inline;
-        font-family: "Cormorant Garamond", sans-serif;
-        font-weight: 600;
-        font-size: 32px;
-    }
+  .nameForAdaptive {
+    display: inline;
+    font-family: "Cormorant Garamond", sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+  }
 
-    .nameForAdaptiveTwo {
-        display: block;
-        font-family: "Cormorant Garamond", sans-serif;
-        font-weight: 600;
-        font-size: 32px;
-        text-align: right;
-    }
+  .nameForAdaptiveTwo {
+    display: block;
+    font-family: "Cormorant Garamond", sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    text-align: right;
+  }
 
-    .text, .textTwo {
-        font-weight: 400;
-        font-size: 16px;
-        text-align: justify;
-        line-height: 130%;
-    }
+  .text,
+  .textTwo {
+    font-weight: 400;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 150%;
+  }
 }
-
 
 /* ========= DESKTOP ========== */
 
 @media (min-width: 1158px) {
-.title {
+  .title {
     margin-bottom: 46px;
-}
+  }
 
-.avatar {
+  .avatar {
     order: 0;
     width: 400px;
     height: 400px;
-}
+  }
 
-.avatarTwo {
+  .avatarTwo {
     order: 2;
     width: 400px;
     height: 400px;
-}
+  }
 
-.textWrapperTwo {
+  .textWrapperTwo {
     order: 1;
-}
+  }
 
-.infoContainer {
+  .infoContainer {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-}
+  }
 
-.text {
+  .text {
+    max-width: 684px;
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-align: end;
+    line-height: unset;
+  }
+
+  .textTwo {
     max-width: 684px;
     font-size: 16px;
     margin-bottom: 8px;
     text-align: start;
     line-height: unset;
-}
+  }
 
-.textTwo {
-    max-width: 684px;
-    font-size: 16px;
-    margin-bottom: 8px;
-    text-align: end;
-    line-height: unset;
-}
-
-/* .textContainer {
+  /* .textContainer {
     text-align: end;
 } */
-
 }

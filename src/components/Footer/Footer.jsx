@@ -28,9 +28,9 @@ const Footer = () => {
         <a
           className={styles.link}
           target="_blank"
-          href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJvrcNLCRKCsXlVhWKWLWvJxnClwslWBkjXBthRsqZSnfmgtkhnlmJbphWPwPRWDwLpVxxV"
+          href="mailto:RegnarDesigners@outlook.be"
         >
-          bijouterieregnard@outlook.be
+          RegnarDesigners@outlook.be
         </a>
         <br />
         <a className={styles.link} href="tel:+32486414930">
