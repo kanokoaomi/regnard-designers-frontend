@@ -29,6 +29,8 @@ const UpdatePicturePage = () => {
     formData.append("pictureUrl", values.pictureUrl);
     formData.append("title", values.title);
     formData.append("desc", values.desc);
+    formData.append("descFr", values.descFr);
+    formData.append("descNl", values.descNl);
     try {
       await dispatch(updatePicture({ pictureId: id, formData })).unwrap();
       actions.resetForm();
@@ -36,7 +38,7 @@ const UpdatePicturePage = () => {
       navigate("/");
     } catch (error) {
       ErrorToast(
-        error.message || "Failed to update picture. Please try again."
+        error.message || "Failed to update picture. Please try again.",
       );
     }
   };

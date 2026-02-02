@@ -24,5 +24,11 @@
         "aboutMaxime3": "Je dois mon expertise à Bernard Biernaux, un mentor hautement qualifié qui a forgé mon talent. Chez Regnard Designer, l'intégrité, la créativité et le sens de la collaboration guident chaque aspect de mon travail. Je m'engage à fournir des produits de qualité et à viser inlassablement l'unicité et l'innovation dans mes créations."
     },
     "contact": "Contactez-nous par e-mail ou par téléphone !",
-    "orContact": "Ou cliquez sur les boutons pour nous retrouver sur les réseaux sociaux :"
+    "orContact": "Ou cliquez sur les boutons pour nous retrouver sur les réseaux sociaux :",
+    "addPicture": {
+        "title": "Ajouter une nouvelle image",
+        "name": "Titre",
+        "desc": "Description",
+        "btn": "Ajouter l'image"
+    }
 }

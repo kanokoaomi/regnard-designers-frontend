@@ -1,11 +1,6 @@
 import { useTranslation } from "react-i18next";
 import styles from "./LanguageSelector.module.css";
-
-const languages = [
-  { code: "en", language: "English" },
-  { code: "fr", language: "French" },
-  { code: "nl", language: "Dutch" },
-];
+import { languages } from "../../utils/languages";
 
 const LanguageSelector = () => {
   const { i18n } = useTranslation();

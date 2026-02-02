@@ -24,5 +24,11 @@
         "aboutMaxime3": "Mijn expertise dank ik aan Bernard Biernaux, een zeer bekwaam mentor die mijn talent heeft gesmeed. Bij Regnard Designer leiden integriteit, creativiteit en zin voor samenwerking elk aspect van mijn werk. Ik wil kwaliteitsvolle produkten leveren en onvermoeibaar streven naar uniciteit en innovatie in mijn creaties."
     },
     "contact": "Neem contact met ons op via e-mail of telefoon!",
-    "orContact": "Of klik op de knoppen om ons te vinden op sociale media:"
+    "orContact": "Of klik op de knoppen om ons te vinden op sociale media:",
+    "addPicture": {
+        "title": "Voeg een nieuwe afbeelding toe",
+        "name": "Titel",
+        "desc": "Beschrijving",
+        "btn": "Voeg de afbeelding toe"
+    }
 }

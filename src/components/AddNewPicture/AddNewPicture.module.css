@@ -69,18 +69,27 @@
 }
 
 .formContainer {
-  margin-top: 48px;
+  /* margin-top: 48px; */
   margin-left: 100px;
 }
 
 .form {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .label {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
+}
+
+.text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  margin-bottom: 8px;
+  color: #888;
 }
 
 .inputContainer {
@@ -106,6 +115,7 @@
 
 .buttonWrapper > button {
   /* margin-left: 0; */
-  margin-right: 0;
-  margin-top: 115px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
 }

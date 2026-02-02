@@ -1,8 +1,25 @@
 import Modal from "react-modal";
 import styles from "./ModalPicture.module.css";
+import { useTranslation } from "react-i18next";
 
 const ModalPicture = ({ picture, onClose, isOpen }) => {
   Modal.setAppElement("#root");
+
+  const { i18n } = useTranslation();
+  const currentLang = i18n.language;
+
+  const getDescription = () => {
+    switch (currentLang) {
+      case "en":
+        return picture.desc;
+      case "fr":
+        return picture.descFr || picture.desc;
+      case "nl":
+        return picture.descNl || picture.desc;
+      default:
+        return picture.desc;
+    }
+  };
 
   return (
     <Modal
@@ -46,7 +63,7 @@ const ModalPicture = ({ picture, onClose, isOpen }) => {
       />
       <div className={styles.textContainer}>
         <h3 className={styles.title}>{picture.title}</h3>
-        <p className={styles.desc}>{picture.desc}</p>
+        <p className={styles.desc}>{getDescription()}</p>
       </div>
       {/* </div> */}
     </Modal>
