@@ -7,7 +7,14 @@ import { useTranslation } from "react-i18next";
 
 const AboutUs = () => {
   const { t } = useTranslation();
-  const { aboutStephan1, aboutStephan2, aboutStephan3 } = t("aboutStephan");
+  const {
+    aboutStephan1,
+    aboutStephan2,
+    aboutStephan3,
+    aboutStephan4,
+    aboutStephan5,
+  } = t("aboutStephan");
+  const { aboutMaxime1, aboutMaxime2, aboutMaxime3 } = t("aboutMaxime");
 
   return (
     <div id="about">
@@ -25,12 +32,12 @@ const AboutUs = () => {
           <h3 className={styles.name}>Maxime</h3>
           <div className={styles.textWrapper}>
             <h3 className={styles.nameForAdaptive}>Maxime</h3>
-            <div>
-              <p className={styles.textTwo}>{t("aboutMaxime")}</p>
-              <p className={styles.textTwo}>
-                <b>Maxime Regnard</b>
-              </p>
-            </div>
+            <p className={styles.textTwo}>{aboutMaxime1}</p>
+            <p className={styles.textTwo}>{aboutMaxime2}</p>
+            <p className={styles.textTwo}>{aboutMaxime3}</p>
+            <p className={styles.textTwo}>
+              <b>Maxime Regnard</b>
+            </p>
           </div>
         </div>
         <Line />
@@ -44,7 +51,8 @@ const AboutUs = () => {
             <p className={styles.text}>{aboutStephan1}</p>
             <p className={styles.text}>{aboutStephan2}</p>
             <p className={styles.text}>{aboutStephan3}</p>
-
+            <p className={styles.text}>{aboutStephan4}</p>
+            <p className={styles.text}>{aboutStephan5}</p>
             <p className={styles.text}>
               <b>Stephan Armand</b>
             </p>

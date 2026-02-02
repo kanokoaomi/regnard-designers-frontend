@@ -12,11 +12,17 @@
     "section3": "About",
     "section3span": "Us",
     "aboutStephan": {
-        "aboutStephan1": "“From the moment I saw gold flowing in the crucible, I felt a profound fascination for the precious metal. This led to my lifelong passion for goldsmithing. My story began at the Institut d'Art et Technique de Bruxelles, where I learned the art of goldsmithing. To deeply understand the knowledge and properties of each gemstone, I further studied geology and gemology at KUL Leuven. My drive was to unveil their hidden beauty, and this fascination inspired my creations.",
-        "aboutStephan2": "I developed a passion for combining art, gold, and gemstones into jewelry. Inspired by great masters, I translate jewelry into my own medium: gold. My travels through Asia and my deep connection with Brazil have influenced my work. The vibrant colors and culture of this large Latin American country inspire my creativity. I aim to be a bridge builder between different cultures and eras, where traditional craftsmanship and modern design complement each other.",
-        "aboutStephan3": "The process of jewelry creation starts with sketches and designs and culminates in the finished jewel. In my workshop, I draw and forge with great precision, making my creations expressions of beauty and contemporary technique.”"
+        "aboutStephan1": "From the moment I saw gold flowing in a crucible, I felt a deep fascination for precious metals. It became my lifelong passion.",
+        "aboutStephan2": "My story began at the Institut d'Art Technique de Bruxelles, where I learned the art of goldsmithing. At KU Leuven, I studied geology and gemology.",
+        "aboutStephan3": "My driving force is to bring out the hidden splendor of gemstones in my jewelry. Inspired by great artists, I translate their creations into my own medium: gold.",
+        "aboutStephan4": "My travels through Asia and my strong bond with Brazil have influenced my work. I strive to be a bridge-builder between different cultures and eras, where traditional craftsmanship and modern design complement each other.",
+        "aboutStephan5": "The process of jewelry creation begins with sketches and designs. In my workshop, I forge with great precision, ensuring my creations are shaped by contemporary techniques and radiate pure beauty."
     },
-    "aboutMaxime": "“To revolutionize art, one must first revolutionize oneself, knowing one’s strengths and weaknesses. Thanks to my Fine Arts studies and the inspiration drawn from museums, I create jewelry that breaks away from traditional codes. Why become a jewelry designer? This craft awakened my soul, set my body on fire, and unleashed my creativity. I burn with the desire to share this consuming passion through every piece I create. I owe my expertise to Bernard Biernaux, an exceptional mentor who forged my talent. Today, I am a master in this captivating universe. At RegnarDesigner, my core values of integrity, creativity, and collaboration guide every aspect of my work. I am committed to delivering high-quality products while relentlessly pursuing innovation and uniqueness in my creations.”",
+    "aboutMaxime": {
+        "aboutMaxime1": "To achieve a revolution in art, you must first reach revolutionary insights within yourself. Thanks to my studies in Fine Arts and the inspiration I found in museums, I was led to become a jewelry designer who breaks traditional codes.",
+        "aboutMaxime2": "This craft has touched my soul and liberated my creativity. I passionately desire to share this passion with you in every piece I create.",
+        "aboutMaxime3": "I owe my expertise to Bernard Biernaux, a highly skilled mentor who forged my talent. At Regnard Designer, integrity, creativity, and a spirit of collaboration guide every aspect of my work. I am committed to delivering high-quality products and tirelessly striving for uniqueness and innovation in my creations."
+    },
     "contact": "Contact us via e-mail or a call!",
     "orContact": "Or click on the buttons to find us in social media:",
     "addPicture": {
