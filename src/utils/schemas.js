@@ -46,11 +46,17 @@ export const updatePictureSchema = Yup.object().shape({
   desc: Yup.string()
     .min(10, "*Too Short!")
     .max(250, "*Too Long!"),
-  pictureUrl: Yup.mixed()
-    .test(
-      "fileFormat",
-      "*Unsupported file format",
-      (value) =>
-        value && ["image/jpeg", "image/png", "image/jpg"].includes(value.type)
-    ),
+   pictureUrl: Yup.mixed().test(
+    "fileFormat",
+    "*Unsupported file format",
+    (value) => {
+      if (!value) return true;
+
+      // Existing picture URL
+      if (typeof value === "string") return true;
+
+      // New uploaded file
+      return ["image/jpeg", "image/png", "image/jpg"].includes(value.type);
+    }
+  ),
 });

@@ -26,13 +26,19 @@ const UpdatePicturePage = () => {
 
   const handleSubmit = async (values, actions) => {
     const formData = new FormData();
-    formData.append("pictureUrl", values.pictureUrl);
+
+    if (values.pictureUrl instanceof File) {
+      formData.append("pictureUrl", values.pictureUrl);
+    }
+
     formData.append("title", values.title);
     formData.append("desc", values.desc);
     formData.append("descFr", values.descFr);
     formData.append("descNl", values.descNl);
+
     try {
       await dispatch(updatePicture({ pictureId: id, formData })).unwrap();
+
       actions.resetForm();
       SuccessToast("Picture updated successfully!");
       navigate("/");
